@@ -9,25 +9,25 @@ const services = [{
   color: "text-primary"
 }, {
   icon: Package,
-  title: "Print-on-Demand Orders",
+  title: "PRINT ON DEMAND",
   description: "Automated ordering system with real-time pricing. From 25 to 10,000+ units with instant quotes.",
   features: ["Live Configurator", "Instant Pricing", "25+ Bag Sizes", "Premium Finishes"],
   color: "text-accent"
 }, {
   icon: Box,
-  title: "Premium Boxes",
+  title: "PREMIUM BOXES MIN. 500 PCS.",
   description: "Child-resistant containers, luxury boxes, and custom packaging solutions for every cannabis product.",
   features: ["Child-Resistant", "Luxury Finishes", "Custom Sizes", "Compliance Ready"],
   color: "text-secondary"
 }, {
   icon: Zap,
-  title: "Rush Fulfillment",
+  title: "RUSH ORDER FULFILLMENT",
   description: "Priority production queue for urgent orders. Same-day printing with express shipping options.",
   features: ["24hr Turnaround", "Express Shipping", "Priority Queue", "Real-Time Tracking"],
   color: "text-primary"
 }, {
   icon: Palette,
-  title: "Brand Strategy",
+  title: "IN HOUSE DESIGN DEPARTMENT.",
   description: "Comprehensive brand development and strategy services to elevate your cannabis business.",
   features: ["Market Research", "Brand Positioning", "Visual Identity", "Brand Guidelines"],
   color: "text-accent"
@@ -51,7 +51,7 @@ const ServicesGrid = () => {
                 <CardContent className="p-8 py-[20px]">
                   {/* Bag Image - First element */}
                   <div className="flex justify-center mb-6">
-                    <img src="/lovable-uploads/b2cf62dc-4fe0-40ba-a71c-f54423d9b53f.png" alt="Premium Cannabis Packaging" className="w-48 h-auto rounded-lg" />
+                    <img src="/lovable-uploads/110c795f-57b9-4ea7-9018-ac957df911a4.png" alt="Quick Printz Logo" className="w-48 h-auto rounded-lg" />
                   </div>
 
                   {/* Content aligned with bullets */}
