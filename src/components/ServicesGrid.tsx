@@ -32,8 +32,7 @@ const ServicesGrid = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center leading-tight">
-            <div className="text-lightning-yellow mb-2 w-full">FULL SERVICE</div>
-            
+            <div className="text-lightning-yellow mb-2 w-full">FULL-SERVICE</div>
             <div className="text-lightning-yellow mb-2 w-full">PACKAGING</div>
             <div className="text-lightning-yellow w-full">ENTERPRISE</div>
           </h2>
@@ -69,13 +68,6 @@ const ServicesGrid = () => {
         })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <Button variant="premium" size="lg" className="group">
-            View All Services
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </div>
       </div>
     </section>;
 };
