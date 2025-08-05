@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import lightningBg from "@/assets/lightning-bg.jpg";
+import lightningBg from "@/assets/lightning-yellow-bg.jpg";
 
 const HeroSection = () => {
   return (
