@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Palette, Package, Box, Zap, ArrowRight } from "lucide-react";
 const services = [{
   icon: Palette,
-  title: "Custom Package Design",
+  title: "CUSTOM MYLAR BAGS",
   description: "Full-service design studio creating premium cannabis packaging that stands out on dispensary shelves.",
   features: ["Logo Design", "Brand Strategy", "Package Mockups", "Print-Ready Files"],
   color: "text-primary"
