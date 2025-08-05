@@ -20,7 +20,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="font-bold text-2xl text-foreground">
+            <div className="font-bold text-2xl text-lightning-yellow">
               QUICK PRINTZ
             </div>
           </div>
@@ -54,7 +54,7 @@ const Navigation = () => {
             variant="ghost"
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden h-10 w-10 bg-white border border-border rounded-md"
+            className="lg:hidden h-10 w-10 bg-lightning-yellow border border-lightning-yellow rounded-md"
           >
             {isOpen ? <X className="w-5 h-5 text-black" /> : <Menu className="w-5 h-5 text-black" />}
           </Button>

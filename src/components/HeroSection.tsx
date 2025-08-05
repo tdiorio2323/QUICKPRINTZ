@@ -10,7 +10,7 @@ const HeroSection = () => {
         <img 
           src={lightningBg} 
           alt="Lightning Background"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-overlay"></div>
       </div>
@@ -22,16 +22,11 @@ const HeroSection = () => {
           <img 
             src="/lovable-uploads/1eedce7b-3acd-4662-a3c3-5bc1320d31e8.png" 
             alt="Quick Printz"
-            className="mx-auto max-w-md w-full h-auto rounded-3xl"
+            className="mx-auto max-w-md w-full h-auto rounded-3xl shadow-glow"
           />
         </div>
 
 
-        {/* Services Text */}
-        <div className="text-xl md:text-2xl font-bold text-lightning-yellow mb-8 tracking-wide text-center">
-          <div>INDUSTRY LEADING PACKAGING</div>
-          <div>EXPERTS</div>
-        </div>
 
         {/* Dual CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
