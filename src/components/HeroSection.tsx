@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import heroPackaging from "@/assets/hero-packaging.jpg";
+import lightningBg from "@/assets/lightning-bg.jpg";
 
 const HeroSection = () => {
   return (
@@ -8,8 +8,8 @@ const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroPackaging} 
-          alt="Premium Cannabis Packaging"
+          src={lightningBg} 
+          alt="Lightning Background"
           className="w-full h-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-overlay"></div>
@@ -22,7 +22,7 @@ const HeroSection = () => {
           <img 
             src="/lovable-uploads/1eedce7b-3acd-4662-a3c3-5bc1320d31e8.png" 
             alt="Quick Printz"
-            className="mx-auto max-w-md w-full h-auto"
+            className="mx-auto max-w-md w-full h-auto rounded-3xl"
           />
         </div>
 
