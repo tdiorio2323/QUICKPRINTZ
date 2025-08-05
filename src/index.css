@@ -198,6 +198,6 @@ All colors MUST be HSL.
   .lightning-shimmer {
     background: linear-gradient(90deg, hsl(54 100% 50%), hsl(43 89% 58%), hsl(54 100% 50%), hsl(43 89% 58%));
     background-size: 400% 100%;
-    animation: shimmer 2s ease-in-out infinite;
+    animation: shimmer 10s ease-in-out infinite;
   }
 }
