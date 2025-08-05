@@ -15,7 +15,13 @@ const Index = () => {
       </div>
       <div id="portfolio" className="px-6 py-[22px]">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-card/50 backdrop-blur-sm border-border/50 rounded-[20px] h-96 shadow-[0_0_40px_hsl(var(--lightning-yellow)/0.4)]"></div>
+          <div className="bg-card/50 backdrop-blur-sm border-border/50 rounded-[20px] h-96 shadow-[0_0_40px_hsl(var(--lightning-yellow)/0.4)] overflow-hidden">
+            <img 
+              src="/lovable-uploads/95a90181-78ea-4a63-8307-2c38fe2abb5d.png" 
+              alt="Place Your Order Today" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
       
