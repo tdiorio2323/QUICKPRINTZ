@@ -13,7 +13,7 @@ const Footer = () => {
                 <ShoppingBag className="w-7 h-7 text-primary-foreground" />
               </div>
               <div>
-                <div className="font-bold text-xl text-gradient-primary">BAGMAN NY</div>
+                <div className="font-bold text-xl text-gradient-primary">QUICK PRINTZ</div>
                 <div className="text-sm text-muted-foreground">Premium Cannabis Packaging</div>
               </div>
             </div>
@@ -75,7 +75,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
-            © 2024 Bagman NY. All rights reserved.
+            © 2024 Quick Printz. All rights reserved.
           </div>
           <div className="flex gap-6 text-sm">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
