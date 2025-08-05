@@ -50,21 +50,13 @@ const ServicesGrid = () => {
                   </div>
 
                   {/* Content aligned with bullets */}
-                  <div className="mb-6">
+                  <div className="mb-8">
                     <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
                       {service.description}
                     </p>
-                  </div>
-
-                  {/* Features List */}
-                  <div className="grid grid-cols-2 gap-3 mb-6">
-                    {service.features.map((feature, idx) => <div key={idx} className="flex items-center gap-2 text-sm">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                        <span className="text-muted-foreground">{feature}</span>
-                      </div>)}
                   </div>
 
                   {/* CTA Button */}
