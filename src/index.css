@@ -34,6 +34,10 @@ All colors MUST be HSL.
     --accent: 43 89% 58%;
     --accent-foreground: 0 0% 8%;
 
+    /* Lightning yellow */
+    --lightning-yellow: 54 100% 50%;
+    --lightning-yellow-foreground: 0 0% 8%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
@@ -44,6 +48,7 @@ All colors MUST be HSL.
     /* Tropical luxury gradients */
     --gradient-primary: linear-gradient(135deg, hsl(340 82% 52%), hsl(43 89% 58%));
     --gradient-cannabis: linear-gradient(135deg, hsl(174 72% 56%), hsl(340 82% 52%));
+    --gradient-lightning: linear-gradient(135deg, hsl(54 100% 50%), hsl(43 89% 58%), hsl(54 100% 50%));
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 12%));
     --gradient-overlay: linear-gradient(45deg, hsl(0 0% 8% / 0.9), hsl(340 82% 52% / 0.1));
 
@@ -136,6 +141,11 @@ All colors MUST be HSL.
     background: var(--gradient-dark);
   }
 
+  .gradient-lightning {
+    background: var(--gradient-lightning);
+    animation: shimmer 2s ease-in-out infinite alternate;
+  }
+
   .gradient-overlay {
     background: var(--gradient-overlay);
   }
@@ -174,5 +184,20 @@ All colors MUST be HSL.
   .hover-glow:hover {
     box-shadow: var(--shadow-glow);
     transform: translateY(-2px);
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  .lightning-shimmer {
+    background: linear-gradient(90deg, hsl(54 100% 50%), hsl(43 89% 58%), hsl(54 100% 50%), hsl(43 89% 58%));
+    background-size: 400% 100%;
+    animation: shimmer 2s ease-in-out infinite;
   }
 }

@@ -21,6 +21,7 @@ const buttonVariants = cva(
         premium: "bg-gradient-primary text-primary-foreground hover:shadow-glow transform hover:scale-105 font-bold",
         cannabis: "bg-gradient-cannabis text-accent-foreground hover:shadow-glow transform hover:scale-105",
         hero: "bg-gradient-primary text-primary-foreground hover:shadow-glow transform hover:scale-105 shadow-premium text-lg font-bold",
+        lightning: "lightning-shimmer text-black hover:shadow-glow transform hover:scale-105 font-bold",
       },
       size: {
         default: "h-10 px-4 py-2",

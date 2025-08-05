@@ -61,11 +61,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				'lightning-yellow': {
+					DEFAULT: 'hsl(var(--lightning-yellow))',
+					foreground: 'hsl(var(--lightning-yellow-foreground))'
 				}
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-cannabis': 'var(--gradient-cannabis)',
+				'gradient-lightning': 'var(--gradient-lightning)',
 				'gradient-dark': 'var(--gradient-dark)',
 				'gradient-overlay': 'var(--gradient-overlay)'
 			},

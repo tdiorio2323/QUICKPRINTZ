@@ -28,18 +28,18 @@ const HeroSection = () => {
 
 
         {/* Services Text */}
-        <p className="text-xl md:text-2xl font-bold text-foreground mb-8 tracking-wide">
-          MYLAR BAGS - BOXES - GRAPHIC DESIGNS & MORE
+        <p className="text-xl md:text-2xl font-bold text-lightning-yellow mb-8 tracking-wide">
+          MYLAR BAGS - BOXES - GRAPHIC DESIGN & MORE
         </p>
 
         {/* Dual CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-          <Button variant="outline" size="xl" className="backdrop-blur-sm">
+          <Button variant="lightning" size="xl" className="backdrop-blur-sm w-80">
             Order Bags Online
             <ArrowRight className="w-5 h-5" />
           </Button>
           
-          <Button variant="hero" size="xl" className="group">
+          <Button variant="lightning" size="xl" className="group w-80">
             Custom Design Services
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
