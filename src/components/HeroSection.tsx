@@ -17,15 +17,6 @@ const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
-        {/* Cabana Logo */}
-        <div className="mb-8">
-          <img 
-            src="/lovable-uploads/7fe280dc-94c6-4de1-80d7-0144c7ed10a7.png" 
-            alt="Cabana"
-            className="mx-auto max-w-2xl w-full h-auto"
-          />
-        </div>
-
         {/* Quick Printz Logo */}
         <div className="mb-8">
           <img 
@@ -34,6 +25,7 @@ const HeroSection = () => {
             className="mx-auto max-w-md w-full h-auto"
           />
         </div>
+
 
         {/* Dual CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
