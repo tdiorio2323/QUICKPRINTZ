@@ -19,11 +19,9 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <img src={bagIcon} alt="Bagman NY" className="w-10 h-10" />
-            <div className="hidden sm:block">
-              <div className="font-bold text-lg bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent animate-pulse">BAGMAN NY</div>
-              <div className="text-xs text-black/70 font-medium">Premium Cannabis Packaging</div>
+          <div className="flex items-center">
+            <div className="font-bold text-2xl text-foreground">
+              QUICK PRINTZ
             </div>
           </div>
 
@@ -56,9 +54,9 @@ const Navigation = () => {
             variant="ghost"
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden h-12 w-12"
+            className="lg:hidden h-10 w-10 bg-white border border-border rounded-md"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-5 h-5 text-black" /> : <Menu className="w-5 h-5 text-black" />}
           </Button>
         </div>
 

@@ -26,11 +26,14 @@ const HeroSection = () => {
           />
         </div>
 
-        {/* Subheading */}
-        <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-          Premium cannabis packaging design & automated print-on-demand fulfillment. 
-          From custom branding to same-day shipping.
-        </p>
+        {/* Quick Printz Logo */}
+        <div className="mb-8">
+          <img 
+            src="/lovable-uploads/1eedce7b-3acd-4662-a3c3-5bc1320d31e8.png" 
+            alt="Quick Printz"
+            className="mx-auto max-w-md w-full h-auto"
+          />
+        </div>
 
         {/* Dual CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
