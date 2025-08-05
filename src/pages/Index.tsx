@@ -18,7 +18,7 @@ const Index = () => {
           <div className="bg-card/50 backdrop-blur-sm border-border/50 rounded-[20px] h-96 shadow-[0_0_40px_hsl(var(--lightning-yellow)/0.4)]"></div>
         </div>
       </div>
-      <PODConfigurator />
+      
       <Footer />
     </div>
   );
