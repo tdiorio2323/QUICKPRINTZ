@@ -44,13 +44,34 @@ const ServicesGrid = () => {
           </h2>
         </div>
 
-        {/* Quick Printz Logo */}
-        <div className="flex justify-center">
-          <img 
-            src="/lovable-uploads/4019ba2e-3743-461f-8378-597b5f232f96.png" 
-            alt="Quick Printz Logo" 
-            className="w-full max-w-2xl h-auto"
-          />
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {services.map((service, index) => {
+          return <Card key={index} className="group bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/30 transition-all duration-500 hover-glow">
+                <CardContent className="p-8 py-[20px]">
+                  {/* Bag Image - First element */}
+                  <div className="flex justify-center mb-6">
+                    <img src="/lovable-uploads/b2cf62dc-4fe0-40ba-a71c-f54423d9b53f.png" alt="Premium Cannabis Packaging" className="w-48 h-auto rounded-lg" />
+                  </div>
+
+                  {/* Content aligned with bullets */}
+                  <div className="mb-8">
+                    <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  {/* CTA Button */}
+                  <Button variant="ghost" className="group/btn w-full justify-between bg-lightning-yellow text-black hover:bg-lightning-yellow/90">
+                    ORDER NOW
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform text-black" />
+                  </Button>
+                </CardContent>
+              </Card>;
+        })}
         </div>
 
       </div>
