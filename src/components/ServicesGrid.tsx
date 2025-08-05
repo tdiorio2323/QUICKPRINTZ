@@ -39,13 +39,12 @@ const ServicesGrid = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-            <div className="text-lightning-yellow">INDUSTRY LEADING</div>
-            <div className="text-lightning-yellow">PACKAGING EXPERTS</div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center leading-tight">
+            <div className="text-lightning-yellow mb-2 w-full">INDUSTRY</div>
+            <div className="text-lightning-yellow mb-2 w-full">LEADING</div>
+            <div className="text-lightning-yellow mb-2 w-full">PACKAGING</div>
+            <div className="text-lightning-yellow w-full">EXPERTS</div>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From initial design concepts to automated fulfillment, we handle every aspect of your cannabis packaging needs.
-          </p>
         </div>
 
         {/* Services Grid */}
