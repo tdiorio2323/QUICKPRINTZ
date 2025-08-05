@@ -27,8 +27,13 @@ const HeroSection = () => {
         </div>
 
 
+        {/* Services Text */}
+        <p className="text-xl md:text-2xl font-bold text-foreground mb-8 tracking-wide">
+          MYLAR BAGS - BOXES - GRAPHIC DESIGNS & MORE
+        </p>
+
         {/* Dual CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
           <Button variant="outline" size="xl" className="backdrop-blur-sm">
             Order Bags Online
             <ArrowRight className="w-5 h-5" />
