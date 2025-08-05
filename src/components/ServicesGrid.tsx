@@ -69,7 +69,7 @@ const ServicesGrid = () => {
 
                   {/* CTA Button */}
                   <Button variant="ghost" className="group/btn w-full justify-between bg-lightning-yellow text-black hover:bg-lightning-yellow/90">
-                    Learn More
+                    ORDER NOW
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform text-black" />
                   </Button>
                 </CardContent>
