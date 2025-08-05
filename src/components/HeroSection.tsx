@@ -28,9 +28,10 @@ const HeroSection = () => {
 
 
         {/* Services Text */}
-        <p className="text-xl md:text-2xl font-bold text-lightning-yellow mb-8 tracking-wide">
-          MYLAR BAGS - BOXES - GRAPHIC DESIGN & MORE
-        </p>
+        <div className="text-xl md:text-2xl font-bold text-lightning-yellow mb-8 tracking-wide text-center">
+          <div>INDUSTRY LEADING PACKAGING</div>
+          <div>EXPERTS</div>
+        </div>
 
         {/* Dual CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
@@ -45,21 +46,6 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 pt-8 border-t border-border/20">
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24-48hr</div>
-            <div className="text-muted-foreground">Rush Delivery</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">1000+</div>
-            <div className="text-muted-foreground">Brands Served</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">99.8%</div>
-            <div className="text-muted-foreground">On-Time Delivery</div>
-          </div>
-        </div>
       </div>
 
       {/* Scroll Indicator */}
