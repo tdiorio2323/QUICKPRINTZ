@@ -1,49 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Premium design system with sophisticated color palette and typography */
 
 @layer base {
   :root {
-    /* Lightning Yellow Black White theme */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    /* Luxury deep space theme with premium gold accents */
+    --background: 220 25% 4%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
+    --card: 220 20% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 220 22% 6%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Lightning yellow primary */
-    --primary: 54 100% 50%;
-    --primary-foreground: 0 0% 0%;
+    /* Premium gold primary */
+    --primary: 45 100% 62%;
+    --primary-foreground: 220 25% 4%;
 
-    /* White secondary */
-    --secondary: 0 0% 100%;
-    --secondary-foreground: 0 0% 0%;
+    /* Sophisticated platinum secondary */
+    --secondary: 210 15% 85%;
+    --secondary-foreground: 220 25% 4%;
 
-    /* Dark muted tones */
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 70%;
+    /* Refined muted tones */
+    --muted: 220 20% 12%;
+    --muted-foreground: 210 8% 65%;
 
-    /* Lightning yellow accent */
-    --accent: 54 100% 50%;
-    --accent-foreground: 0 0% 0%;
+    /* Luxe accent gold */
+    --accent: 43 96% 56%;
+    --accent-foreground: 220 25% 4%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 10%;
-    --ring: 54 100% 50%;
+    --border: 220 15% 18%;
+    --input: 220 20% 10%;
+    --ring: 43 96% 56%;
 
-    /* Lightning yellow */
-    --lightning-yellow: 54 100% 50%;
-    --lightning-yellow-foreground: 0 0% 0%;
+    /* Premium gold variations */
+    --lightning-yellow: 43 96% 56%;
+    --lightning-yellow-foreground: 220 25% 4%;
 
     /* Lightning themed gradients */
     --gradient-primary: linear-gradient(135deg, hsl(54 100% 50%), hsl(60 100% 60%));
