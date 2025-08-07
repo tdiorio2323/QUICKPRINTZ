@@ -15,12 +15,12 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-lightning-yellow/30">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-morphism border-b border-primary/20 shadow-elegant">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="font-bold text-2xl text-lightning-yellow">
+            <div className="font-display font-bold text-3xl premium-gradient-text tracking-tight">
               QUICK PRINTZ
             </div>
           </div>
