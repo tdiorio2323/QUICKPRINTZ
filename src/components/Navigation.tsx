@@ -20,8 +20,12 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="font-display font-bold text-3xl premium-gradient-text tracking-tight">
-              QUICK PRINTZ
+            <div className="relative h-auto font-normal pointer-events-auto pl-5">
+              <h2>
+                <font face="Gasoek One, sans-serif">
+                  <b>QUICK PRINTZ</b>
+                </font>
+              </h2>
             </div>
           </div>
 
