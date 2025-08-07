@@ -1,33 +1,33 @@
 import { Button } from "@/components/ui/button";
 import { Zap, Mail, Phone, MapPin, Instagram, Twitter, Linkedin } from "lucide-react";
 const Footer = () => {
-  return <footer className="bg-gradient-dark border-t border-border/20 py-12 mt-auto">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+  return <footer className="bg-gradient-dark border-t border-primary/20 py-20 mt-auto shadow-elegant">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
-                <Zap className="w-7 h-7 text-primary-foreground" />
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-premium">
+                <Zap className="w-8 h-8 text-primary-foreground" />
               </div>
               <div>
-                <div className="font-bold text-xl text-gradient-primary">QUICK PRINTZ</div>
-                <div className="text-sm text-muted-foreground">Premium Cannabis Packaging</div>
+                <div className="font-display font-bold text-2xl premium-gradient-text">QUICK PRINTZ</div>
+                <div className="font-body text-muted-foreground">Premium Cannabis Packaging</div>
               </div>
             </div>
-            <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
-              More than print, we build brands. The #1 independent cannabis packaging agency 
+            <p className="font-body text-muted-foreground mb-8 max-w-lg leading-relaxed text-lg">
+              More than print, we build brands. The #1 independent cannabis packaging agency
               offering custom design services and automated print-on-demand fulfillment.
             </p>
             <div className="flex gap-4">
-              <Button variant="outline" size="icon" className="bg-background/10 backdrop-blur-sm">
-                <Instagram className="w-4 h-4" />
+              <Button variant="outline" size="icon" className="glass-morphism hover-lift h-12 w-12 shadow-elegant">
+                <Instagram className="w-5 h-5" />
               </Button>
-              <Button variant="outline" size="icon" className="bg-background/10 backdrop-blur-sm">
-                <Twitter className="w-4 h-4" />
+              <Button variant="outline" size="icon" className="glass-morphism hover-lift h-12 w-12 shadow-elegant">
+                <Twitter className="w-5 h-5" />
               </Button>
-              <Button variant="outline" size="icon" className="bg-background/10 backdrop-blur-sm">
-                <Linkedin className="w-4 h-4" />
+              <Button variant="outline" size="icon" className="glass-morphism hover-lift h-12 w-12 shadow-elegant">
+                <Linkedin className="w-5 h-5" />
               </Button>
             </div>
           </div>
