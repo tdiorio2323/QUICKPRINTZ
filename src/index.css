@@ -153,6 +153,10 @@
     font-family: 'Gasoek One', sans-serif;
   }
 
+  .font-bebas {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
   /* Custom utility classes */
   .gradient-primary {
     background: var(--gradient-primary);
