@@ -34,36 +34,36 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-lightning-yellow">SERVICES</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Custom Package Design</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Print-on-Demand Orders</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Premium Boxes</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Rush Fulfillment</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Brand Strategy</a></li>
+            <h3 className="font-display font-bold text-xl mb-6 premium-gradient-text">SERVICES</h3>
+            <ul className="space-y-4">
+              <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Custom Package Design</a></li>
+              <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Print-on-Demand Orders</a></li>
+              <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Premium Boxes</a></li>
+              <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Rush Fulfillment</a></li>
+              <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Brand Strategy</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-lightning-yellow">CONTACT US TO ORDER</h3>
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">ORDER@QUICKPRINTZ.COM</span>
+            <h3 className="font-display font-bold text-xl mb-6 premium-gradient-text">CONTACT US TO ORDER</h3>
+            <div className="space-y-5">
+              <div className="flex items-center gap-4">
+                <Mail className="w-5 h-5 text-primary" />
+                <span className="font-body text-muted-foreground">ORDER@QUICKPRINTZ.COM</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">(555) 420-BAGS</span>
+              <div className="flex items-center gap-4">
+                <Phone className="w-5 h-5 text-primary" />
+                <span className="font-body text-muted-foreground">(555) 420-BAGS</span>
               </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">@QUICKPRINTZ</span>
+              <div className="flex items-center gap-4">
+                <MapPin className="w-5 h-5 text-primary" />
+                <span className="font-body text-muted-foreground">@QUICKPRINTZ</span>
               </div>
             </div>
 
-            <div className="mt-6">
-              <Button variant="premium" size="sm" className="w-full" asChild>
+            <div className="mt-8">
+              <Button variant="premium" size="lg" className="w-full font-body shadow-premium hover-lift" asChild>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                   Follow Us
                 </a>
