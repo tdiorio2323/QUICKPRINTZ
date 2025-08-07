@@ -73,14 +73,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-muted-foreground">
+        <div className="border-t border-primary/20 mt-16 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="font-body text-muted-foreground">
             © 2025 QUICK PRINTZ. All rights reserved.
           </div>
-          <div className="flex gap-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Shipping Policy</a>
+          <div className="flex gap-8 font-body">
+            <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-105">Privacy Policy</a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-105">Terms of Service</a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-105">Shipping Policy</a>
           </div>
         </div>
       </div>
