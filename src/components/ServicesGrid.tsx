@@ -6,31 +6,36 @@ const services = [{
   title: "CUSTOM MYLAR BAGS",
   description: "Full-service design studio creating premium cannabis packaging that stands out on dispensary shelves.",
   features: ["Logo Design", "Brand Strategy", "Package Mockups", "Print-Ready Files"],
-  color: "text-primary"
+  color: "text-primary",
+  image: "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F5847553743ce48f5b2a6dc2214b11244?format=webp&width=800"
 }, {
   icon: Package,
   title: "PRINT ON DEMAND",
   description: "Automated ordering system with real-time pricing. From 25 to 10,000+ units with instant quotes.",
   features: ["Live Configurator", "Instant Pricing", "25+ Bag Sizes", "Premium Finishes"],
-  color: "text-accent"
+  color: "text-accent",
+  image: "/lovable-uploads/110c795f-57b9-4ea7-9018-ac957df911a4.png"
 }, {
   icon: Box,
   title: "PREMIUM BOXES MIN. 500 PCS.",
   description: "Child-resistant containers, luxury boxes, and custom packaging solutions for every cannabis product.",
   features: ["Child-Resistant", "Luxury Finishes", "Custom Sizes", "Compliance Ready"],
-  color: "text-secondary"
+  color: "text-secondary",
+  image: "/lovable-uploads/110c795f-57b9-4ea7-9018-ac957df911a4.png"
 }, {
   icon: Zap,
   title: "RUSH ORDER FULFILLMENT",
   description: "Priority production queue for urgent orders. Same-day printing with express shipping options.",
   features: ["24hr Turnaround", "Express Shipping", "Priority Queue", "Real-Time Tracking"],
-  color: "text-primary"
+  color: "text-primary",
+  image: "/lovable-uploads/110c795f-57b9-4ea7-9018-ac957df911a4.png"
 }, {
   icon: Palette,
   title: "IN HOUSE DESIGN DEPARTMENT.",
   description: "Comprehensive brand development and strategy services to elevate your cannabis business.",
   features: ["Market Research", "Brand Positioning", "Visual Identity", "Brand Guidelines"],
-  color: "text-accent"
+  color: "text-accent",
+  image: "/lovable-uploads/110c795f-57b9-4ea7-9018-ac957df911a4.png"
 }];
 const ServicesGrid = () => {
   return <section className="px-8 py-24">
