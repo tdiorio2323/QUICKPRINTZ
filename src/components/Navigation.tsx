@@ -17,14 +17,12 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-morphism border-b border-primary/20 shadow-elegant">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between py-6">
           {/* Logo */}
           <div className="flex items-center">
             <div className="relative h-auto font-normal pointer-events-auto pl-5">
-              <h2>
-                <font face="Gasoek One, sans-serif">
-                  <b>QUICK PRINTZ</b>
-                </font>
+              <h2 className="text-8xl font-gasoek font-bold text-white leading-none">
+                QUICK PRINTZ
               </h2>
             </div>
           </div>
