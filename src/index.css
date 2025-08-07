@@ -217,8 +217,49 @@
   }
 
   .lightning-shimmer {
-    background: linear-gradient(90deg, hsl(54 100% 50%), hsl(43 89% 58%), hsl(54 100% 50%), hsl(43 89% 58%));
+    background: linear-gradient(90deg, hsl(43 96% 56%), hsl(45 100% 62%), hsl(43 96% 56%), hsl(45 100% 62%));
     background-size: 400% 100%;
-    animation: shimmer 10s ease-in-out infinite;
+    animation: shimmer 8s ease-in-out infinite;
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .gradient-luxury {
+    background: var(--gradient-luxury);
+  }
+
+  .text-gradient-luxury {
+    background: var(--gradient-luxury);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .backdrop-blur-premium {
+    backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-premium);
+  }
+
+  .glass-morphism {
+    background: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid hsl(var(--border) / 0.2);
+  }
+
+  .premium-gradient-text {
+    background: linear-gradient(135deg, hsl(43 96% 56%), hsl(45 100% 62%), hsl(40 85% 50%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
