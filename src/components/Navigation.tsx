@@ -21,7 +21,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="relative h-auto font-normal pointer-events-auto pl-5">
-              <h2 className="text-8xl font-gasoek font-bold text-white leading-none">
+              <h2 className="text-4xl font-bebas font-bold text-white leading-none">
                 QUICK PRINTZ
               </h2>
             </div>
