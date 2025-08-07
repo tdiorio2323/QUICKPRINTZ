@@ -57,9 +57,9 @@ const ServicesGrid = () => {
           {services.map((service, index) => {
           return <Card key={index} className="group glass-morphism hover:border-primary/40 transition-all duration-700 hover-lift shadow-elegant hover:shadow-premium">
                 <CardContent className="p-10">
-                  {/* Bag Image - First element */}
+                  {/* Service Image - First element */}
                   <div className="flex justify-center mb-8">
-                    <img src="/lovable-uploads/110c795f-57b9-4ea7-9018-ac957df911a4.png" alt="Quick Printz Logo" className="w-56 h-auto rounded-2xl shadow-elegant group-hover:shadow-premium transition-all duration-500" />
+                    <img src={service.image} alt={service.title} className="w-56 h-auto rounded-2xl shadow-elegant group-hover:shadow-premium transition-all duration-500" />
                   </div>
 
                   {/* Content aligned with bullets */}
