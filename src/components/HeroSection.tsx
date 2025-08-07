@@ -20,7 +20,7 @@ const HeroSection = () => {
         {/* Quick Printz Logo */}
         <div className="mb-12">
           <img
-            src="/lovable-uploads/1eedce7b-3acd-4662-a3c3-5bc1320d31e8.png"
+            src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F0407190ea98f4f9b9b9795dbd6db9ab1"
             alt="Quick Printz"
             className="mx-auto max-w-lg w-full h-auto rounded-[2rem] shadow-premium hover-lift"
           />
