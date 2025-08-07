@@ -54,32 +54,32 @@ const Navigation = () => {
             variant="ghost"
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden h-10 w-10 bg-lightning-yellow border border-lightning-yellow rounded-md"
+            className="lg:hidden h-12 w-12 bg-primary border border-primary rounded-xl shadow-glow"
           >
-            {isOpen ? <X className="w-5 h-5 text-black" /> : <Menu className="w-5 h-5 text-black" />}
+            {isOpen ? <X className="w-6 h-6 text-primary-foreground" /> : <Menu className="w-6 h-6 text-primary-foreground" />}
           </Button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden bg-card/50 backdrop-blur-sm border-t border-border/20 py-4">
-            <div className="space-y-4">
+          <div className="lg:hidden glass-morphism border-t border-primary/20 py-6 shadow-elegant">
+            <div className="space-y-6">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  className="block text-base font-medium font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="flex flex-col gap-2 pt-4 border-t border-border/20">
-                <Button variant="ghost" size="sm" className="w-full">
+              <div className="flex flex-col gap-3 pt-6 border-t border-primary/20">
+                <Button variant="ghost" size="lg" className="w-full font-body">
                   <Palette className="w-4 h-4 mr-2" />
                   Custom Design
                 </Button>
-                <Button variant="premium" size="sm" className="w-full">
+                <Button variant="premium" size="lg" className="w-full font-body shadow-premium">
                   Order Now
                 </Button>
               </div>
