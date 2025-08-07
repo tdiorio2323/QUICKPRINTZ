@@ -26,12 +26,12 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-10">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-105 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
               >
                 {item.name}
               </a>
@@ -39,12 +39,12 @@ const Navigation = () => {
           </div>
 
           {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
+          <div className="hidden lg:flex items-center gap-4">
+            <Button variant="ghost" size="lg" className="font-body hover-lift">
               <Palette className="w-4 h-4 mr-2" />
               Custom Design
             </Button>
-            <Button variant="premium" size="sm">
+            <Button variant="premium" size="lg" className="font-body shadow-premium">
               Order Now
             </Button>
           </div>
