@@ -22,7 +22,7 @@ const Design = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center max-w-7xl mx-auto px-8">
+        <div className="relative z-10 text-center max-w-7xl mx-auto px-8 mb-0 sm:mb-0">
           {/* Updated Content */}
           <div className="mb-8">
             <img
