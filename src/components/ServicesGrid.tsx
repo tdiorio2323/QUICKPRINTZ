@@ -9,19 +9,12 @@ const services = [{
   color: "text-primary",
   image: "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F5847553743ce48f5b2a6dc2214b11244?format=webp&width=800"
 }, {
-  icon: Package,
-  title: "PRINT ON DEMAND",
-  description: "Automated ordering system with real-time pricing. From 25 to 10,000+ units with instant quotes.",
-  features: ["Live Configurator", "Instant Pricing", "25+ Bag Sizes", "Premium Finishes"],
-  color: "text-accent",
-  image: "/lovable-uploads/110c795f-57b9-4ea7-9018-ac957df911a4.png"
-}, {
   icon: Box,
   title: "PREMIUM BOXES MIN. 500 PCS.",
   description: "Child-resistant containers, luxury boxes, and custom packaging solutions for every cannabis product.",
   features: ["Child-Resistant", "Luxury Finishes", "Custom Sizes", "Compliance Ready"],
   color: "text-secondary",
-  image: "/lovable-uploads/110c795f-57b9-4ea7-9018-ac957df911a4.png"
+  image: "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F4a800e0b806b41be876fb245e8fcf36d"
 }, {
   icon: Zap,
   title: "RUSH ORDER FULFILLMENT",
@@ -35,7 +28,7 @@ const services = [{
   description: "Comprehensive brand development and strategy services to elevate your cannabis business.",
   features: ["Market Research", "Brand Positioning", "Visual Identity", "Brand Guidelines"],
   color: "text-accent",
-  image: "/lovable-uploads/110c795f-57b9-4ea7-9018-ac957df911a4.png"
+  image: "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F539ee0c642a44e56b37c043056f01a7d"
 }];
 const ServicesGrid = () => {
   return <section className="px-8 py-24">
