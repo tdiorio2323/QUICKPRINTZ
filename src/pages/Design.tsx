@@ -23,15 +23,6 @@ const Design = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-7xl mx-auto px-8">
-          {/* TD Studios Logo */}
-          <div className="mb-12">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F8e6ddb11ee7a4330b389af7949e051e7?format=webp&width=800"
-              alt="TD Studios"
-              className="mx-auto max-w-lg w-full h-auto rounded-[2rem] shadow-premium hover-lift"
-            />
-          </div>
-
           {/* Updated Content */}
           <div className="mb-8">
             <img
@@ -42,6 +33,15 @@ const Design = () => {
             <p className="font-body text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Fill out the form below to get your custom logo or designs:
             </p>
+          </div>
+
+          {/* TD Studios Building Image */}
+          <div className="mb-12">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F8e6ddb11ee7a4330b389af7949e051e7?format=webp&width=800"
+              alt="TD Studios"
+              className="mx-auto max-w-lg w-full h-auto rounded-[2rem] shadow-premium hover-lift"
+            />
           </div>
 
           {/* Single Get Started Button */}
