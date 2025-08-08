@@ -37,18 +37,31 @@ const MylarBags = () => {
         </div>
       </section>
 
-      {/* Form Section - Placeholder */}
-      <section className="py-24 px-8">
-        <div className="max-w-4xl mx-auto">
+      {/* Form Section */}
+      <section className="relative py-24 px-8 bg-lightning-yellow overflow-hidden">
+        {/* Lightning Background Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="lightning-mylar" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+                <path d="M50 0L30 80h20L40 160l40-80H60L80 0z" fill="#000" opacity="0.8"/>
+                <path d="M150 40L130 120h20L140 200l40-80H160L180 40z" fill="#000" opacity="0.6"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#lightning-mylar)"/>
+          </svg>
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Request Your <span className="text-gradient-primary">Custom Quote</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">
+              Request Your <span className="text-black">Custom Quote</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-black/80 font-medium">
               Tell us about your project and we'll create the perfect mylar bag solution for your brand.
             </p>
           </div>
-          
+
           {/* Contact Form */}
           <ContactForm />
         </div>
