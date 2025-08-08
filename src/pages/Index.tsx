@@ -2,7 +2,6 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ServicesGrid from "@/components/ServicesGrid";
 import PortfolioSlideshow from "@/components/PortfolioSlideshow";
-import PODConfigurator from "@/components/PODConfigurator";
 import Footer from "@/components/Footer";
 
 const Index = () => {

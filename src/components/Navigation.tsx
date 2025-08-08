@@ -9,7 +9,6 @@ const Navigation = () => {
   const navigation = [
     { name: "Services", href: "#services" },
     { name: "Portfolio", href: "#portfolio" },
-    { name: "POD Orders", href: "#configurator" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" }
   ];
