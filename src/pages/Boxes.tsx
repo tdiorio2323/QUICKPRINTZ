@@ -67,6 +67,17 @@ const Boxes = () => {
         </div>
       </section>
 
+      {/* Contact Info Image Section */}
+      <section className="py-16 px-8 bg-background">
+        <div className="max-w-4xl mx-auto text-center">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2Fa58db4f6919c4d2195e6e5f04b75b88b?format=webp&width=800"
+            alt="Get In Touch - Contact Information"
+            className="w-full max-w-md mx-auto rounded-2xl shadow-premium hover-lift transition-transform duration-500"
+          />
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
