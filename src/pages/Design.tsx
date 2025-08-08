@@ -1,11 +1,13 @@
 import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 
 const Design = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-32 pb-20">
+      <HeroSection />
+      <main className="pt-20 pb-20">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bebas font-bold text-white mb-4">
