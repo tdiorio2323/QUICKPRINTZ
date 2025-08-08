@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -48,12 +49,8 @@ const MylarBags = () => {
             </p>
           </div>
           
-          {/* Form Placeholder */}
-          <div className="glass-morphism border-primary/20 rounded-[2rem] p-12 shadow-premium">
-            <p className="text-center text-xl text-muted-foreground">
-              Form will be added here based on your specifications
-            </p>
-          </div>
+          {/* Contact Form */}
+          <ContactForm />
         </div>
       </section>
 
