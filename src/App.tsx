@@ -8,6 +8,7 @@ import MylarBags from "./pages/MylarBags";
 import Boxes from "./pages/Boxes";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import Design from "./pages/Design";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/boxes" element={<Boxes />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/design" element={<Design />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
