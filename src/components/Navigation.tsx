@@ -13,6 +13,7 @@ const Navigation = () => {
     { name: "Mylar Bags", href: "/mylar-bags" },
     { name: "Boxes", href: "/boxes" },
     { name: "Gallery", href: "/gallery" },
+    { name: "Design", href: "/design" },
     { name: "Contact", href: "/contact" }
   ];
 
@@ -48,9 +49,11 @@ const Navigation = () => {
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="ghost" size="lg" className="font-body hover-lift">
-              <Palette className="w-4 h-4 mr-2" />
-              Custom Design
+            <Button variant="ghost" size="lg" className="font-body hover-lift" asChild>
+              <Link to="/design">
+                <Palette className="w-4 h-4 mr-2" />
+                Custom Design
+              </Link>
             </Button>
             <Button variant="premium" size="lg" className="font-body shadow-premium">
               Order Now
@@ -87,9 +90,11 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="flex flex-col gap-3 pt-6 border-t border-primary/20">
-                <Button variant="ghost" size="lg" className="w-full font-body">
-                  <Palette className="w-4 h-4 mr-2" />
-                  Custom Design
+                <Button variant="ghost" size="lg" className="w-full font-body" asChild>
+                  <Link to="/design">
+                    <Palette className="w-4 h-4 mr-2" />
+                    Custom Design
+                  </Link>
                 </Button>
                 <Button variant="premium" size="lg" className="w-full font-body shadow-premium">
                   Order Now
