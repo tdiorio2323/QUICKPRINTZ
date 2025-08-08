@@ -34,9 +34,11 @@ const Design = () => {
 
           {/* Updated Content */}
           <div className="mb-16">
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold premium-gradient-text mb-6 tracking-tight">
-              TD STUDIOS
-            </h1>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F0910880b1cb3445191f5fc518f473235?format=webp&width=800"
+              alt="TD Studios Logo"
+              className="mx-auto max-w-md h-auto mb-6 hover-lift"
+            />
             <p className="font-body text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Fill out the form below to get your custom logo or designs:
             </p>
