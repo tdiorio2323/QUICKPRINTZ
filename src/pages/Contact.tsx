@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import ContactForm from "@/components/ContactForm";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
@@ -82,20 +82,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="glass-morphism border-primary/20 rounded-[2rem] p-8 shadow-premium">
-              <h3 className="text-2xl font-bold mb-6">Send us a message</h3>
-              
-              {/* Form Placeholder */}
-              <div className="space-y-6">
-                <p className="text-center text-lg text-muted-foreground py-12">
-                  Contact form will be added here based on your specifications
-                </p>
-                
-                <Button variant="premium" className="w-full h-12 text-lg">
-                  Send Message
-                </Button>
-              </div>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
