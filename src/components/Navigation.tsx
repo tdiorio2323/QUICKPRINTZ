@@ -22,11 +22,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between py-6">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="relative h-auto font-normal pointer-events-auto pl-5">
+            <Link to="/" className="relative h-auto font-normal pointer-events-auto pl-5 hover:opacity-80 transition-opacity">
               <h2 className="text-4xl font-bebas font-bold text-white leading-none">
                 QUICK PRINTZ
               </h2>
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
