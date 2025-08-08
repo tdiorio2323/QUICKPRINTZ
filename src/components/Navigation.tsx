@@ -15,23 +15,25 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-lightning-yellow/30">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-morphism border-b border-primary/20 shadow-elegant">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex items-center justify-between py-6">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="font-bold text-2xl text-lightning-yellow">
-              QUICK PRINTZ
+            <div className="relative h-auto font-normal pointer-events-auto pl-5">
+              <h2 className="text-4xl font-bebas font-bold text-white leading-none">
+                QUICK PRINTZ
+              </h2>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-10">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-105 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
               >
                 {item.name}
               </a>
@@ -39,12 +41,12 @@ const Navigation = () => {
           </div>
 
           {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
+          <div className="hidden lg:flex items-center gap-4">
+            <Button variant="ghost" size="lg" className="font-body hover-lift">
               <Palette className="w-4 h-4 mr-2" />
               Custom Design
             </Button>
-            <Button variant="premium" size="sm">
+            <Button variant="premium" size="lg" className="font-body shadow-premium">
               Order Now
             </Button>
           </div>
@@ -54,32 +56,32 @@ const Navigation = () => {
             variant="ghost"
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden h-10 w-10 bg-lightning-yellow border border-lightning-yellow rounded-md"
+            className="lg:hidden h-12 w-12 bg-primary border border-primary rounded-xl shadow-glow"
           >
-            {isOpen ? <X className="w-5 h-5 text-black" /> : <Menu className="w-5 h-5 text-black" />}
+            {isOpen ? <X className="w-6 h-6 text-primary-foreground" /> : <Menu className="w-6 h-6 text-primary-foreground" />}
           </Button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden bg-card/50 backdrop-blur-sm border-t border-border/20 py-4">
-            <div className="space-y-4">
+          <div className="lg:hidden glass-morphism border-t border-primary/20 py-6 shadow-elegant">
+            <div className="space-y-6">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  className="block text-base font-medium font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="flex flex-col gap-2 pt-4 border-t border-border/20">
-                <Button variant="ghost" size="sm" className="w-full">
+              <div className="flex flex-col gap-3 pt-6 border-t border-primary/20">
+                <Button variant="ghost" size="lg" className="w-full font-body">
                   <Palette className="w-4 h-4 mr-2" />
                   Custom Design
                 </Button>
-                <Button variant="premium" size="sm" className="w-full">
+                <Button variant="premium" size="lg" className="w-full font-body shadow-premium">
                   Order Now
                 </Button>
               </div>

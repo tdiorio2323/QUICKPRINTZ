@@ -13,18 +13,18 @@ const Index = () => {
       <div id="services">
         <ServicesGrid />
       </div>
-      <div id="portfolio" className="px-6 py-[22px]">
+      <div id="portfolio" className="px-8 py-24">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-card/50 backdrop-blur-sm border-border/50 rounded-[20px] h-96 shadow-[0_0_40px_hsl(var(--lightning-yellow)/0.4)] overflow-hidden">
-            <img 
-              src="/lovable-uploads/4d0a2941-3ac7-42f0-98cf-84effd87b57b.png" 
-              alt="Place Your Order Today" 
-              className="w-full h-full object-cover"
+          <div className="glass-morphism border-primary/20 rounded-[2rem] h-[28rem] shadow-premium hover-lift overflow-hidden">
+            <img
+              src="/lovable-uploads/4d0a2941-3ac7-42f0-98cf-84effd87b57b.png"
+              alt="Place Your Order Today"
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );
