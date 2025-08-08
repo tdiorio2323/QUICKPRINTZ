@@ -9,13 +9,6 @@ const services = [{
   color: "text-primary",
   image: "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F5847553743ce48f5b2a6dc2214b11244?format=webp&width=800"
 }, {
-  icon: Package,
-  title: "PRINT ON DEMAND",
-  description: "Automated ordering system with real-time pricing. From 25 to 10,000+ units with instant quotes.",
-  features: ["Live Configurator", "Instant Pricing", "25+ Bag Sizes", "Premium Finishes"],
-  color: "text-accent",
-  image: "/lovable-uploads/110c795f-57b9-4ea7-9018-ac957df911a4.png"
-}, {
   icon: Box,
   title: "PREMIUM BOXES MIN. 500 PCS.",
   description: "Child-resistant containers, luxury boxes, and custom packaging solutions for every cannabis product.",
