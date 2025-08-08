@@ -50,10 +50,10 @@ const Navigation = () => {
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-4">
             <Button variant="ghost" size="lg" className="font-body hover-lift" asChild>
-              <a href="https://tdstudiosny.com" target="_blank" rel="noopener noreferrer">
+              <Link to="/design">
                 <Palette className="w-4 h-4 mr-2" />
                 Custom Design
-              </a>
+              </Link>
             </Button>
             <Button variant="premium" size="lg" className="font-body shadow-premium">
               Order Now
@@ -91,10 +91,10 @@ const Navigation = () => {
               ))}
               <div className="flex flex-col gap-3 pt-6 border-t border-primary/20">
                 <Button variant="ghost" size="lg" className="w-full font-body" asChild>
-                  <a href="https://tdstudiosny.com" target="_blank" rel="noopener noreferrer">
+                  <Link to="/design">
                     <Palette className="w-4 h-4 mr-2" />
                     Custom Design
-                  </a>
+                  </Link>
                 </Button>
                 <Button variant="premium" size="lg" className="w-full font-body shadow-premium">
                   Order Now
