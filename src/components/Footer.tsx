@@ -37,7 +37,6 @@ const Footer = () => {
             <h3 className="font-display font-bold text-xl mb-6 premium-gradient-text">SERVICES</h3>
             <ul className="space-y-4">
               <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Custom Package Design</a></li>
-              <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Print-on-Demand Orders</a></li>
               <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Premium Boxes</a></li>
               <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Rush Fulfillment</a></li>
               <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Brand Strategy</a></li>
