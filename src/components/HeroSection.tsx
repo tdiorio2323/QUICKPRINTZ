@@ -1,18 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import lightningBg from "@/assets/lightning-yellow-bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-40">
+      {/* Hero Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src={lightningBg}
-          alt="Lightning Background"
-          className="w-full h-full object-cover opacity-40"
+          src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F4c0f86f96cca4362ac224726da4f1cd9?format=webp&width=800"
+          alt="Hero Background"
+          className="w-full h-full object-cover transform rotate-90"
         />
-        <div className="absolute inset-0 bg-gradient-overlay"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       {/* Hero Content */}
@@ -22,7 +21,7 @@ const HeroSection = () => {
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F9a0d735aeec84099864bc786d8078b82"
             alt="Quick Printz"
-            className="mx-auto max-w-lg w-full h-auto rounded-[2rem] shadow-premium hover-lift"
+            className="mx-auto max-w-lg w-full h-auto rounded-[2rem] shadow-premium hover-lift sm:-mt-px"
           />
         </div>
 
@@ -37,7 +36,7 @@ const HeroSection = () => {
         </div>
 
         {/* Dual CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-[22px] justify-center items-center">
           <Button variant="lightning" size="xl" className="backdrop-blur-premium w-80 h-16 text-lg font-body shadow-premium hover-lift">
             Order Bags Online
             <ArrowRight className="w-6 h-6" />

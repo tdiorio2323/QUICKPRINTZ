@@ -21,7 +21,7 @@ const services = [{
   description: "Priority production queue for urgent orders. Same-day printing with express shipping options.",
   features: ["24hr Turnaround", "Express Shipping", "Priority Queue", "Real-Time Tracking"],
   color: "text-primary",
-  image: "/lovable-uploads/110c795f-57b9-4ea7-9018-ac957df911a4.png"
+  image: "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F9a0d735aeec84099864bc786d8078b82"
 }, {
   icon: Palette,
   title: "IN HOUSE DESIGN DEPARTMENT.",
@@ -31,8 +31,18 @@ const services = [{
   image: "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F539ee0c642a44e56b37c043056f01a7d"
 }];
 const ServicesGrid = () => {
-  return <section className="px-8 py-24">
-      <div className="max-w-7xl mx-auto">
+  return <section className="relative px-8 py-24">
+      {/* Black Brick Wall Background */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.pexels.com/photos/2273486/pexels-photo-2273486.jpeg"
+          alt="Black Brick Wall"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight">
@@ -48,15 +58,15 @@ const ServicesGrid = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {services.map((service, index) => {
-          return <Card key={index} className="group glass-morphism hover:border-primary/40 transition-all duration-700 hover-lift shadow-elegant hover:shadow-premium">
-                <CardContent className="p-10">
+          return <Card key={index} className="group glass-morphism hover:border-primary/40 transition-all duration-700 hover-lift shadow-elegant hover:shadow-premium h-full flex flex-col">
+                <CardContent className="p-10 flex flex-col h-full">
                   {/* Service Image - First element */}
                   <div className="flex justify-center mb-8">
-                    <img src={service.image} alt={service.title} className="w-56 h-auto rounded-2xl shadow-elegant group-hover:shadow-premium transition-all duration-500" />
+                    <img src={service.image} alt={service.title} className="w-56 h-40 object-cover rounded-2xl shadow-elegant group-hover:shadow-premium transition-all duration-500" />
                   </div>
 
                   {/* Content aligned with bullets */}
-                  <div className="mb-10">
+                  <div className="mb-10 flex-grow">
                     <h3 className="font-display text-2xl font-bold mb-4 group-hover:text-gradient-luxury transition-all duration-300">
                       {service.title}
                     </h3>
@@ -66,7 +76,7 @@ const ServicesGrid = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <Button variant="premium" className="group/btn w-full justify-between h-14 text-lg font-body shadow-premium hover-lift">
+                  <Button variant="premium" className="group/btn w-full justify-between h-14 text-lg font-body shadow-premium hover-lift mt-auto">
                     ORDER NOW
                     <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
                   </Button>

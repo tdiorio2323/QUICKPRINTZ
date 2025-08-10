@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Zap, Mail, Phone, MapPin, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Zap, Mail, Phone, MapPin, Instagram, Twitter, Send } from "lucide-react";
 const Footer = () => {
   return <footer className="bg-gradient-dark border-t border-primary/20 py-20 mt-auto shadow-elegant">
       <div className="max-w-7xl mx-auto px-8">
@@ -20,14 +20,14 @@ const Footer = () => {
               offering custom design services and automated print-on-demand fulfillment.
             </p>
             <div className="flex gap-4">
-              <Button variant="outline" size="icon" className="glass-morphism hover-lift h-12 w-12 shadow-elegant">
+              <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-black hover-lift h-12 w-12 shadow-elegant">
                 <Instagram className="w-5 h-5" />
               </Button>
-              <Button variant="outline" size="icon" className="glass-morphism hover-lift h-12 w-12 shadow-elegant">
+              <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-black hover-lift h-12 w-12 shadow-elegant">
                 <Twitter className="w-5 h-5" />
               </Button>
-              <Button variant="outline" size="icon" className="glass-morphism hover-lift h-12 w-12 shadow-elegant">
-                <Linkedin className="w-5 h-5" />
+              <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-black hover-lift h-12 w-12 shadow-elegant">
+                <Send className="w-5 h-5" />
               </Button>
             </div>
           </div>
