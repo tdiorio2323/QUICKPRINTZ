@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Zap, Mail, Phone, MapPin, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Zap, Mail, Phone, MapPin, Instagram, Twitter, Send } from "lucide-react";
 const Footer = () => {
   return <footer className="bg-gradient-dark border-t border-primary/20 py-20 mt-auto shadow-elegant">
       <div className="max-w-7xl mx-auto px-8">
