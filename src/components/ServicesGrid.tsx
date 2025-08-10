@@ -50,7 +50,7 @@ const ServicesGrid = () => {
             <div className="premium-gradient-text mb-3 w-full">PACKAGING</div>
             <div className="premium-gradient-text w-full">ENTERPRISE</div>
           </h2>
-          <p className="font-body text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-8">
+          <p className="font-body text-xl text-white max-w-2xl mx-auto leading-relaxed mt-8">
             Comprehensive packaging solutions designed to elevate your brand and exceed industry standards.
           </p>
         </div>
@@ -70,7 +70,7 @@ const ServicesGrid = () => {
                     <h3 className="font-display text-2xl font-bold mb-4 group-hover:text-gradient-luxury transition-all duration-300">
                       {service.title}
                     </h3>
-                    <p className="font-body text-muted-foreground leading-relaxed text-lg">
+                    <p className="font-body text-white leading-relaxed text-lg">
                       {service.description}
                     </p>
                   </div>
