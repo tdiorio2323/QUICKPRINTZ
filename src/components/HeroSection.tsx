@@ -31,7 +31,7 @@ const HeroSection = () => {
             Premium Packaging
           </h1>
           <p className="font-body text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Elevating cannabis brands with luxury packaging solutions, custom design excellence, and unmatched quality.
+            Elevating brands with luxury packaging solutions, custom design excellence, and unmatched quality.
           </p>
         </div>
 
