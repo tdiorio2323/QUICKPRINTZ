@@ -12,21 +12,21 @@ const Footer = () => {
               </div>
               <div>
                 <div className="font-display font-bold text-2xl premium-gradient-text">QUICK PRINTZ</div>
-                <div className="font-body text-muted-foreground">Premium Cannabis Packaging</div>
+                <div className="font-body text-white">Premium Packaging Experts</div>
               </div>
             </div>
-            <p className="font-body text-muted-foreground mb-8 max-w-lg leading-relaxed text-lg">
-              More than print, we build brands. The #1 independent cannabis packaging agency
+            <p className="font-body text-white mb-8 max-w-lg leading-relaxed text-lg">
+              More than print, we build brands. The #1 independent packaging agency
               offering custom design services and automated print-on-demand fulfillment.
             </p>
             <div className="flex gap-4">
-              <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-black hover-lift h-12 w-12 shadow-elegant">
+              <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-white hover-lift h-12 w-12 shadow-elegant">
                 <Instagram className="w-5 h-5" />
               </Button>
-              <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-black hover-lift h-12 w-12 shadow-elegant">
+              <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-white hover-lift h-12 w-12 shadow-elegant">
                 <Twitter className="w-5 h-5" />
               </Button>
-              <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-black hover-lift h-12 w-12 shadow-elegant">
+              <Button size="icon" className="bg-yellow-500 hover:bg-yellow-600 text-white hover-lift h-12 w-12 shadow-elegant">
                 <Send className="w-5 h-5" />
               </Button>
             </div>
@@ -36,10 +36,10 @@ const Footer = () => {
           <div>
             <h3 className="font-display font-bold text-xl mb-6 premium-gradient-text">SERVICES</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Custom Package Design</a></li>
-              <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Premium Boxes</a></li>
-              <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Rush Fulfillment</a></li>
-              <li><a href="#" className="font-body text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-2">Brand Strategy</a></li>
+              <li><a href="#" className="font-body text-white hover:text-primary transition-all duration-300 hover:translate-x-2">Custom Package Design</a></li>
+              <li><a href="#" className="font-body text-white hover:text-primary transition-all duration-300 hover:translate-x-2">Premium Boxes</a></li>
+              <li><a href="#" className="font-body text-white hover:text-primary transition-all duration-300 hover:translate-x-2">Rush Fulfillment</a></li>
+              <li><a href="#" className="font-body text-white hover:text-primary transition-all duration-300 hover:translate-x-2">Brand Strategy</a></li>
             </ul>
           </div>
 
@@ -51,7 +51,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary" />
                 <a
                   href="mailto:Info@quickprintz.com"
-                  className="font-body text-muted-foreground hover:text-primary transition-colors"
+                  className="font-body text-white hover:text-primary transition-colors"
                 >
                   Info@quickprintz.com
                 </a>
@@ -62,7 +62,7 @@ const Footer = () => {
                   href="https://t.me/quickprintz"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-body text-muted-foreground hover:text-primary transition-colors"
+                  className="font-body text-white hover:text-primary transition-colors"
                 >
                   Click here to Contact Us
                 </a>
@@ -73,7 +73,7 @@ const Footer = () => {
                   href="https://www.instagram.com/quickprintz401/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-body text-muted-foreground hover:text-primary transition-colors"
+                  className="font-body text-white hover:text-primary transition-colors"
                 >
                   @QUICKPRINTZ
                 </a>
@@ -92,13 +92,13 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-primary/20 mt-16 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="font-body text-muted-foreground">
+          <div className="font-body text-white">
             © 2025 QUICK PRINTZ. All rights reserved.
           </div>
           <div className="flex gap-8 font-body">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-105">Privacy Policy</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-105">Terms of Service</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-105">Shipping Policy</a>
+            <a href="#" className="text-white hover:text-primary transition-all duration-300 hover:scale-105">Privacy Policy</a>
+            <a href="#" className="text-white hover:text-primary transition-all duration-300 hover:scale-105">Terms of Service</a>
+            <a href="#" className="text-white hover:text-primary transition-all duration-300 hover:scale-105">Shipping Policy</a>
           </div>
         </div>
       </div>
