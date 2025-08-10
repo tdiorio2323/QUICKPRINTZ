@@ -4,14 +4,14 @@ import { ArrowRight, Sparkles } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-40">
-      {/* Background Image with Overlay */}
+      {/* Black Brick Wall Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src={lightningBg}
-          alt="Lightning Background"
-          className="w-full h-full object-cover opacity-40"
+          src="https://images.pexels.com/photos/2273486/pexels-photo-2273486.jpeg"
+          alt="Black Brick Wall"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-overlay"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Hero Content */}
