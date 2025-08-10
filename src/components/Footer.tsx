@@ -12,11 +12,11 @@ const Footer = () => {
               </div>
               <div>
                 <div className="font-display font-bold text-2xl premium-gradient-text">QUICK PRINTZ</div>
-                <div className="font-body text-white">Premium Cannabis Packaging</div>
+                <div className="font-body text-white">Premium Packaging Experts</div>
               </div>
             </div>
             <p className="font-body text-white mb-8 max-w-lg leading-relaxed text-lg">
-              More than print, we build brands. The #1 independent cannabis packaging agency
+              More than print, we build brands. The #1 independent packaging agency
               offering custom design services and automated print-on-demand fulfillment.
             </p>
             <div className="flex gap-4">
