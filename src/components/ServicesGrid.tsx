@@ -21,7 +21,7 @@ const services = [{
   description: "Priority production queue for urgent orders. Same-day printing with express shipping options.",
   features: ["24hr Turnaround", "Express Shipping", "Priority Queue", "Real-Time Tracking"],
   color: "text-primary",
-  image: "/lovable-uploads/110c795f-57b9-4ea7-9018-ac957df911a4.png"
+  image: "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F9a0d735aeec84099864bc786d8078b82"
 }, {
   icon: Palette,
   title: "IN HOUSE DESIGN DEPARTMENT.",
