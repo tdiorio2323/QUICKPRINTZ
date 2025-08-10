@@ -31,8 +31,18 @@ const services = [{
   image: "https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F539ee0c642a44e56b37c043056f01a7d"
 }];
 const ServicesGrid = () => {
-  return <section className="px-8 py-24">
-      <div className="max-w-7xl mx-auto">
+  return <section className="relative px-8 py-24">
+      {/* Black Brick Wall Background */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.pexels.com/photos/2273486/pexels-photo-2273486.jpeg"
+          alt="Black Brick Wall"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight">
