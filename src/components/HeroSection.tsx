@@ -30,7 +30,7 @@ const HeroSection = () => {
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold premium-gradient-text mb-6 tracking-tight">
             Premium Packaging
           </h1>
-          <p className="font-body text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="font-body text-xl md:text-2xl text-white max-w-3xl mx-auto leading-relaxed">
             Elevating brands with luxury packaging solutions, custom design excellence, and unmatched quality.
           </p>
         </div>
