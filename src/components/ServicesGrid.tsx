@@ -48,15 +48,15 @@ const ServicesGrid = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {services.map((service, index) => {
-          return <Card key={index} className="group glass-morphism hover:border-primary/40 transition-all duration-700 hover-lift shadow-elegant hover:shadow-premium">
-                <CardContent className="p-10">
+          return <Card key={index} className="group glass-morphism hover:border-primary/40 transition-all duration-700 hover-lift shadow-elegant hover:shadow-premium h-full flex flex-col">
+                <CardContent className="p-10 flex flex-col h-full">
                   {/* Service Image - First element */}
                   <div className="flex justify-center mb-8">
-                    <img src={service.image} alt={service.title} className="w-56 h-auto rounded-2xl shadow-elegant group-hover:shadow-premium transition-all duration-500" />
+                    <img src={service.image} alt={service.title} className="w-56 h-40 object-cover rounded-2xl shadow-elegant group-hover:shadow-premium transition-all duration-500" />
                   </div>
 
                   {/* Content aligned with bullets */}
-                  <div className="mb-10">
+                  <div className="mb-10 flex-grow">
                     <h3 className="font-display text-2xl font-bold mb-4 group-hover:text-gradient-luxury transition-all duration-300">
                       {service.title}
                     </h3>
@@ -66,7 +66,7 @@ const ServicesGrid = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <Button variant="premium" className="group/btn w-full justify-between h-14 text-lg font-body shadow-premium hover-lift">
+                  <Button variant="premium" className="group/btn w-full justify-between h-14 text-lg font-body shadow-premium hover-lift mt-auto">
                     ORDER NOW
                     <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
                   </Button>
