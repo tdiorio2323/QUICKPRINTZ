@@ -4,12 +4,14 @@ import { ArrowRight, Sparkles } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-40">
-      {/* Black and Yellow Checker Pattern Background */}
-      <div className="absolute inset-0 z-0 bg-black">
-        <div className="w-full h-full opacity-20" style={{
-          backgroundImage: `repeating-conic-gradient(#000000 0% 25%, #FBBF23 25% 50%)`,
-          backgroundSize: '60px 60px'
-        }}></div>
+      {/* Hero Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F4c0f86f96cca4362ac224726da4f1cd9?format=webp&width=800"
+          alt="Hero Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       {/* Hero Content */}
