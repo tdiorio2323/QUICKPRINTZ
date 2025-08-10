@@ -7,9 +7,9 @@ const HeroSection = () => {
       {/* Hero Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F4c0f86f96cca4362ac224726da4f1cd9?format=webp&width=800"
+          src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F3306cf242e664d5983b4f132a942f5aa?format=webp&width=800"
           alt="Hero Background"
-          className="w-full h-full object-cover transform rotate-90"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
