@@ -9,7 +9,7 @@ const HeroSection = () => {
         <img
           src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F4c0f86f96cca4362ac224726da4f1cd9?format=webp&width=800"
           alt="Hero Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transform rotate-90"
         />
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
