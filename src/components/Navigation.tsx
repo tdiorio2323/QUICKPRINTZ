@@ -39,7 +39,7 @@ const Navigation = () => {
                 className={`text-sm font-medium font-body transition-all duration-300 hover:scale-105 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full ${
                   location.pathname === item.href
                     ? "text-primary after:w-full"
-                    : "text-muted-foreground hover:text-primary"
+                    : "text-white hover:text-primary"
                 }`}
               >
                 {item.name}
@@ -82,7 +82,7 @@ const Navigation = () => {
                   className={`block text-base font-medium font-body transition-all duration-300 hover:translate-x-2 ${
                     location.pathname === item.href
                       ? "text-primary"
-                      : "text-muted-foreground hover:text-primary"
+                      : "text-white hover:text-primary"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
