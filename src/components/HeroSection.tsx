@@ -21,7 +21,7 @@ const HeroSection = () => {
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F9a0d735aeec84099864bc786d8078b82"
             alt="Quick Printz"
-            className="mx-auto max-w-lg w-full h-auto rounded-[2rem] shadow-premium hover-lift"
+            className="mx-auto max-w-lg w-full h-auto rounded-[2rem] shadow-premium hover-lift sm:-mt-px"
           />
         </div>
 
@@ -36,7 +36,7 @@ const HeroSection = () => {
         </div>
 
         {/* Dual CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-[22px] justify-center items-center">
           <Button variant="lightning" size="xl" className="backdrop-blur-premium w-80 h-16 text-lg font-body shadow-premium hover-lift">
             Order Bags Online
             <ArrowRight className="w-6 h-6" />
