@@ -11,6 +11,7 @@ const Navigation = () => {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Products", href: "/products" },
+    { name: "Configure", href: "/configure" },
     { name: "Gallery", href: "/gallery" },
     { name: "About", href: "/about" },
     { name: "FAQ", href: "/faq" },
@@ -55,8 +56,8 @@ const Navigation = () => {
               </Link>
             </Button>
             <Button variant="premium" size="lg" className="font-body shadow-premium" asChild>
-              <Link to="/products">
-                View Products
+              <Link to="/configure">
+                Configure Bags
               </Link>
             </Button>
           </div>
@@ -97,8 +98,8 @@ const Navigation = () => {
                   </Link>
                 </Button>
                 <Button variant="premium" size="lg" className="w-full font-body shadow-premium" asChild>
-                  <Link to="/products">
-                    View Products
+                  <Link to="/configure">
+                    Configure Bags
                   </Link>
                 </Button>
               </div>

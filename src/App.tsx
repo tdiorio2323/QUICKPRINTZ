@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Design from "./pages/Design";
 import Products from "./pages/Products";
 import Quote from "./pages/Quote";
+import MylarBagConfigurator from "./components/MylarBagConfigurator";
 import FAQ from "./pages/FAQ";
 import About from "./pages/About";
 import Compliance from "./pages/Compliance";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/compliance" element={<Compliance />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/design" element={<Design />} />
+          <Route path="/configure" element={<MylarBagConfigurator />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
