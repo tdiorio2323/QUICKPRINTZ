@@ -10,10 +10,10 @@ const Navigation = () => {
 
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "Mylar Bags", href: "/mylar-bags" },
-    { name: "Boxes", href: "/boxes" },
+    { name: "Products", href: "/products" },
     { name: "Gallery", href: "/gallery" },
-    { name: "Design", href: "/design" },
+    { name: "About", href: "/about" },
+    { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" }
   ];
 
@@ -50,13 +50,14 @@ const Navigation = () => {
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-4">
             <Button variant="ghost" size="lg" className="font-body hover-lift" asChild>
-              <Link to="/design">
-                <Palette className="w-4 h-4 mr-2" />
-                Custom Design
+              <Link to="/quote">
+                Get Quote
               </Link>
             </Button>
-            <Button variant="premium" size="lg" className="font-body shadow-premium">
-              Order Now
+            <Button variant="premium" size="lg" className="font-body shadow-premium" asChild>
+              <Link to="/products">
+                View Products
+              </Link>
             </Button>
           </div>
 
@@ -91,13 +92,14 @@ const Navigation = () => {
               ))}
               <div className="flex flex-col gap-3 pt-6 border-t border-primary/20">
                 <Button variant="ghost" size="lg" className="w-full font-body" asChild>
-                  <Link to="/design">
-                    <Palette className="w-4 h-4 mr-2" />
-                    Custom Design
+                  <Link to="/quote">
+                    Get Quote
                   </Link>
                 </Button>
-                <Button variant="premium" size="lg" className="w-full font-body shadow-premium">
-                  Order Now
+                <Button variant="premium" size="lg" className="w-full font-body shadow-premium" asChild>
+                  <Link to="/products">
+                    View Products
+                  </Link>
                 </Button>
               </div>
             </div>

@@ -3,10 +3,25 @@ import HeroSection from "@/components/HeroSection";
 import ServicesGrid from "@/components/ServicesGrid";
 import PortfolioSlideshow from "@/components/PortfolioSlideshow";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Index = () => {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Quick Printz",
+    "url": "https://quickprintz.com",
+    "sameAs": ["https://instagram.com/quickprintz"],
+    "description": "#1 Independent Cannabis Packaging Agency - More Than Print, We Build Brands. Custom design & automated POD fulfillment."
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Premium Cannabis Packaging Agency"
+        description="#1 Independent Cannabis Packaging Agency - More Than Print, We Build Brands. Custom design & automated POD fulfillment."
+        jsonLd={organizationSchema}
+      />
       <Navigation />
       <HeroSection />
       <div id="services">

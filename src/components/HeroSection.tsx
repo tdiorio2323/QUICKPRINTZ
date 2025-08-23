@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -37,9 +38,11 @@ const HeroSection = () => {
 
         {/* Dual CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-[22px] justify-center items-center">
-          <Button variant="lightning" size="xl" className="backdrop-blur-premium w-80 h-16 text-lg font-body shadow-premium hover-lift">
-            Order Bags Online
-            <ArrowRight className="w-6 h-6" />
+          <Button variant="lightning" size="xl" className="backdrop-blur-premium w-80 h-16 text-lg font-body shadow-premium hover-lift" asChild>
+            <Link to="/quote">
+              Get Quote Now
+              <ArrowRight className="w-6 h-6" />
+            </Link>
           </Button>
 
           <Button variant="premium" size="xl" className="group w-80 h-16 text-lg font-body shadow-premium hover-lift">
