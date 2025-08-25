@@ -2,6 +2,20 @@ import React, { useState, useRef } from 'react';
 import { Upload, Eye, Palette, Package, Image } from 'lucide-react';
 import PremadeDesignSlideshow from "./PremadeDesignSlideshow";
 
+const OptionButton = ({ onClick, isSelected, children, selectedClassName = 'border-yellow-400 bg-yellow-900/20' }) => {
+  const baseClasses = 'p-3 border-2 rounded-lg transition-all';
+  const unselectedClasses = 'border-gray-600 hover:border-gray-500 bg-gray-800';
+
+  return (
+    <button
+      onClick={onClick}
+      className={`${baseClasses} ${isSelected ? selectedClassName : unselectedClasses}`}
+    >
+      {children}
+    </button>
+  );
+};
+
 const MylarBagConfigurator = () => {
   const [config, setConfig] = useState({
     size: '',
@@ -206,17 +220,14 @@ const MylarBagConfigurator = () => {
               <label className="block text-sm font-semibold text-yellow-400 mb-3">Bag Size</label>
               <div className="grid grid-cols-2 gap-3">
                 {sizes.map(size => (
-                  <button
+                  <OptionButton
                     key={size.id}
                     onClick={() => updateConfig('size', size.id)}
-                    className={`p-3 border-2 rounded-lg transition-all ${config.size === size.id
-                      ? 'border-yellow-400 bg-yellow-900/20'
-                      : 'border-gray-600 hover:border-gray-500 bg-gray-800'
-                      }`}
+                    isSelected={config.size === size.id}
                   >
                     <div className="font-medium text-yellow-400">{size.name}</div>
                     <div className="text-sm text-gray-400">${size.price}</div>
-                  </button>
+                  </OptionButton>
                 ))}
               </div>
             </div>
@@ -225,13 +236,11 @@ const MylarBagConfigurator = () => {
               <label className="block text-sm font-semibold text-yellow-400 mb-3">Bag Color</label>
               <div className="grid grid-cols-5 gap-3">
                 {colors.map(color => (
-                  <button
+                  <OptionButton
                     key={color.id}
                     onClick={() => updateConfig('color', color.id)}
-                    className={`p-3 border-2 rounded-lg transition-all ${config.color === color.id
-                      ? 'border-yellow-400 ring-2 ring-yellow-400/30'
-                      : 'border-gray-600 hover:border-gray-500 bg-gray-800'
-                      }`}
+                    isSelected={config.color === color.id}
+                    selectedClassName="border-yellow-400 ring-2 ring-yellow-400/30"
                   >
                     <div
                       className="w-full h-8 rounded mb-2 border"
@@ -239,7 +248,7 @@ const MylarBagConfigurator = () => {
                     ></div>
                     <div className="text-xs font-medium text-yellow-400">{color.name}</div>
                     <div className="text-xs text-gray-400">+${color.price}</div>
-                  </button>
+                  </OptionButton>
                 ))}
               </div>
             </div>
@@ -248,17 +257,14 @@ const MylarBagConfigurator = () => {
               <label className="block text-sm font-semibold text-yellow-400 mb-3">Finish</label>
               <div className="grid grid-cols-3 gap-3">
                 {finishes.map(finish => (
-                  <button
+                  <OptionButton
                     key={finish.id}
                     onClick={() => updateConfig('finish', finish.id)}
-                    className={`p-3 border-2 rounded-lg transition-all ${config.finish === finish.id
-                      ? 'border-yellow-400 bg-yellow-900/20'
-                      : 'border-gray-600 hover:border-gray-500 bg-gray-800'
-                      }`}
+                    isSelected={config.finish === finish.id}
                   >
                     <div className="font-medium text-yellow-400">{finish.name}</div>
                     <div className="text-sm text-gray-400">+${finish.price}</div>
-                  </button>
+                  </OptionButton>
                 ))}
               </div>
             </div>
@@ -266,26 +272,20 @@ const MylarBagConfigurator = () => {
             <div>
               <label className="block text-sm font-semibold text-yellow-400 mb-3">Print Sides</label>
               <div className="grid grid-cols-2 gap-3">
-                <button
+                <OptionButton
                   onClick={() => updateConfig('printSides', '1')}
-                  className={`p-3 border-2 rounded-lg transition-all ${config.printSides === '1'
-                    ? 'border-yellow-400 bg-yellow-900/20'
-                    : 'border-gray-600 hover:border-gray-500 bg-gray-800'
-                    }`}
+                  isSelected={config.printSides === '1'}
                 >
                   <div className="font-medium text-yellow-400">1-Side</div>
                   <div className="text-sm text-gray-400">Standard</div>
-                </button>
-                <button
+                </OptionButton>
+                <OptionButton
                   onClick={() => updateConfig('printSides', '2')}
-                  className={`p-3 border-2 rounded-lg transition-all ${config.printSides === '2'
-                    ? 'border-yellow-400 bg-yellow-900/20'
-                    : 'border-gray-600 hover:border-gray-500 bg-gray-800'
-                    }`}
+                  isSelected={config.printSides === '2'}
                 >
                   <div className="font-medium text-yellow-400">2-Sides</div>
                   <div className="text-sm text-gray-400">+$0.30</div>
-                </button>
+                </OptionButton>
               </div>
             </div>
 
@@ -293,19 +293,16 @@ const MylarBagConfigurator = () => {
               <label className="block text-sm font-semibold text-yellow-400 mb-3">Quantity</label>
               <div className="grid grid-cols-2 gap-3">
                 {quantities.map(qty => (
-                  <button
+                  <OptionButton
                     key={qty.value}
                     onClick={() => updateConfig('quantity', qty.value)}
-                    className={`p-3 border-2 rounded-lg transition-all ${config.quantity === qty.value
-                      ? 'border-yellow-400 bg-yellow-900/20'
-                      : 'border-gray-600 hover:border-gray-500 bg-gray-800'
-                      }`}
+                    isSelected={config.quantity === qty.value}
                   >
                     <div className="font-medium text-yellow-400">{qty.label}</div>
                     {qty.discount > 0 && (
                       <div className="text-sm text-green-400">Save {(qty.discount * 100).toFixed(0)}%</div>
                     )}
-                  </button>
+                  </OptionButton>
                 ))}
               </div>
             </div>
@@ -339,46 +336,37 @@ const MylarBagConfigurator = () => {
             <div>
               <label className="block text-sm font-semibold text-yellow-400 mb-3">Design Option</label>
               <div className="grid grid-cols-2 gap-3 mb-4">
-                <button
+                <OptionButton
                   onClick={() => updateConfig('designOption', 'template')}
-                  className={`p-3 border-2 rounded-lg transition-all ${config.designOption === 'template'
-                    ? 'border-yellow-400 bg-yellow-900/20'
-                    : 'border-gray-600 hover:border-gray-500 bg-gray-800'
-                    }`}
+                  isSelected={config.designOption === 'template'}
                 >
                   <Palette className="w-6 h-6 mx-auto mb-2 text-yellow-400" />
                   <div className="font-medium text-yellow-400">Choose Template</div>
-                </button>
-                <button
+                </OptionButton>
+                <OptionButton
                   onClick={() => updateConfig('designOption', 'upload')}
-                  className={`p-3 border-2 rounded-lg transition-all ${config.designOption === 'upload'
-                    ? 'border-yellow-400 bg-yellow-900/20'
-                    : 'border-gray-600 hover:border-gray-500 bg-gray-800'
-                    }`}
+                  isSelected={config.designOption === 'upload'}
                 >
                   <Upload className="w-6 h-6 mx-auto mb-2 text-yellow-400" />
                   <div className="font-medium text-yellow-400">Upload Design</div>
-                </button>
+                </OptionButton>
               </div>
 
               {config.designOption === 'template' && (
                 <>
                   <div className="grid grid-cols-2 gap-3">
                     {templates.map(template => (
-                      <button
+                      <OptionButton
                         key={template.id}
                         onClick={() => updateConfig('selectedTemplate', template.id)}
-                        className={`p-3 border-2 rounded-lg transition-all ${config.selectedTemplate === template.id
-                          ? 'border-yellow-400 bg-yellow-900/20'
-                          : 'border-gray-600 hover:border-gray-500 bg-gray-800'
-                          }`}
+                        isSelected={config.selectedTemplate === template.id}
                       >
                         <div className="w-full h-20 bg-gray-700 rounded mb-2 flex items-center justify-center">
                           <Image className="w-8 h-8 text-gray-400" />
                         </div>
                         <div className="text-sm font-medium text-yellow-400">{template.name}</div>
                         <div className="text-xs text-gray-400">{template.category}</div>
-                      </button>
+                      </OptionButton>
                     ))}
                   </div>
                   {/* Premade Designs Slideshow */}
