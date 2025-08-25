@@ -32,7 +32,7 @@ const Index = () => {
           <div className="glass-morphism border-primary/20 rounded-[2rem] h-[28rem] shadow-premium hover-lift overflow-hidden">
             <img
               src="/lovable-uploads/4d0a2941-3ac7-42f0-98cf-84effd87b57b.png"
-              alt="Place Your Order Today"
+              alt="BUY BAGS Today"
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>

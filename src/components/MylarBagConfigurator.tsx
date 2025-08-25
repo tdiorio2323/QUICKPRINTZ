@@ -62,13 +62,6 @@ const MylarBagConfigurator = () => {
     { value: 1000, label: '1000 bags', discount: 0.25 }
   ];
 
-  const templates = [
-    { id: 1, name: 'Cannabis Leaf', category: 'Cannabis', preview: '/api/placeholder/150/150' },
-    { id: 2, name: 'Minimalist Logo', category: 'Business', preview: '/api/placeholder/150/150' },
-    { id: 3, name: 'Geometric Pattern', category: 'Abstract', preview: '/api/placeholder/150/150' },
-    { id: 4, name: 'Vintage Badge', category: 'Retro', preview: '/api/placeholder/150/150' }
-  ];
-
   const updateConfig = (key, value) => {
     setConfig(prev => ({ ...prev, [key]: value }));
     calculatePricing({ ...config, [key]: value });
@@ -353,28 +346,10 @@ const MylarBagConfigurator = () => {
               </div>
 
               {config.designOption === 'template' && (
-                <>
-                  <div className="grid grid-cols-2 gap-3">
-                    {templates.map(template => (
-                      <OptionButton
-                        key={template.id}
-                        onClick={() => updateConfig('selectedTemplate', template.id)}
-                        isSelected={config.selectedTemplate === template.id}
-                      >
-                        <div className="w-full h-20 bg-gray-700 rounded mb-2 flex items-center justify-center">
-                          <Image className="w-8 h-8 text-gray-400" />
-                        </div>
-                        <div className="text-sm font-medium text-yellow-400">{template.name}</div>
-                        <div className="text-xs text-gray-400">{template.category}</div>
-                      </OptionButton>
-                    ))}
-                  </div>
-                  {/* Premade Designs Slideshow */}
-                  <div className="mt-8">
-                    <label className="block text-sm font-semibold text-yellow-400 mb-3">Or pick a premade design</label>
-                    <PremadeDesignSlideshow onSelect={img => updateConfig('selectedTemplate', img)} />
-                  </div>
-                </>
+                <div className="mt-2">
+                  <label className="block text-sm font-semibold text-yellow-400 mb-3">Pick a premade design</label>
+                  <PremadeDesignSlideshow onSelect={img => updateConfig('selectedTemplate', img)} />
+                </div>
               )}
 
               {config.designOption === 'upload' && (

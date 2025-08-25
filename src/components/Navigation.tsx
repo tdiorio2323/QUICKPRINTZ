@@ -10,8 +10,6 @@ const Navigation = () => {
 
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "Products", href: "/products" },
-    { name: "Configure", href: "/configure" },
     { name: "Gallery", href: "/gallery" },
     { name: "About", href: "/about" },
     { name: "FAQ", href: "/faq" },
@@ -37,11 +35,10 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium font-body transition-all duration-300 hover:scale-105 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full ${
-                  location.pathname === item.href
+                className={`text-sm font-medium font-body transition-all duration-300 hover:scale-105 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full ${location.pathname === item.href
                     ? "text-primary after:w-full"
                     : "text-white hover:text-primary"
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
@@ -57,7 +54,7 @@ const Navigation = () => {
             </Button>
             <Button variant="premium" size="lg" className="font-body shadow-premium" asChild>
               <Link to="/configure">
-                Configure Bags
+                BUY BAGS
               </Link>
             </Button>
           </div>
@@ -81,11 +78,10 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block text-base font-medium font-body transition-all duration-300 hover:translate-x-2 ${
-                    location.pathname === item.href
+                  className={`block text-base font-medium font-body transition-all duration-300 hover:translate-x-2 ${location.pathname === item.href
                       ? "text-primary"
                       : "text-white hover:text-primary"
-                  }`}
+                    }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -99,7 +95,7 @@ const Navigation = () => {
                 </Button>
                 <Button variant="premium" size="lg" className="w-full font-body shadow-premium" asChild>
                   <Link to="/configure">
-                    Configure Bags
+                    BUY BAGS
                   </Link>
                 </Button>
               </div>
