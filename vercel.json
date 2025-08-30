@@ -13,6 +13,13 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        { "type": "host", "value": "bagman.tdstudioshq.com" }
+      ],
+      "destination": "/portal?client=Bagman"
+    },
     { "source": "/(.*)", "destination": "/" }
   ]
 }

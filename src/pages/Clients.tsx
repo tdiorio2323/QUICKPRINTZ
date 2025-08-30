@@ -10,6 +10,7 @@ const clients = [
   { id: "greenleaf", name: "Greenleaf Labs" },
   { id: "northstar", name: "Northstar Holdings" },
   { id: "quickprintz", name: "Quick Printz" },
+  { id: "bagman", name: "Bagman" },
 ];
 
 export const ClientsList = () => {
@@ -54,4 +55,3 @@ export const ClientRedirect = () => {
 };
 
 export default ClientsList;
-

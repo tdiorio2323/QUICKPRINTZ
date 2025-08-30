@@ -12,7 +12,13 @@ const Portal = () => {
   // Read optional client name from URL (?client=Acme%20Co)
   const clientName = useMemo(() => {
     const params = new URLSearchParams(window.location.search);
-    return params.get("client") || "Client Portal";
+    const fromQuery = params.get("client");
+    if (fromQuery) return fromQuery;
+    const host = typeof window !== 'undefined' ? window.location.hostname : "";
+    const hostMap: Record<string, string> = {
+      "bagman.tdstudioshq.com": "Bagman",
+    };
+    return hostMap[host] || "Client Portal";
   }, []);
 
   const folders = useMemo(() => {
