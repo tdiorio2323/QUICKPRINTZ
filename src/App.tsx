@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GA from "@/components/GA";
 import Index from "./pages/Index";
+import Auth from "./pages/Auth";
 import MylarBags from "./pages/MylarBags";
 import Boxes from "./pages/Boxes";
 import Gallery from "./pages/Gallery";
@@ -29,6 +30,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/td" element={<Auth />} />
           <Route path="/products" element={<Products />} />
           <Route path="/mylar-bags" element={<MylarBags />} />
           <Route path="/boxes" element={<Boxes />} />
