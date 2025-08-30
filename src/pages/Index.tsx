@@ -1,4 +1,6 @@
 import Navigation from "@/components/Navigation";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import ServicesGrid from "@/components/ServicesGrid";
 import PortfolioSlideshow from "@/components/PortfolioSlideshow";
@@ -7,6 +9,19 @@ import SEO from "@/components/SEO";
 import QuickContactForm from "@/components/QuickContactForm";
 
 const Index = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const host = typeof window !== 'undefined' ? window.location.hostname : "";
+    const hostMap: Record<string, string> = {
+      "bagman.tdstudioshq.com": "Bagman",
+      // Add more subdomain -> client name mappings here as needed
+    };
+    const client = hostMap[host];
+    if (client) {
+      navigate(`/portal?client=${encodeURIComponent(client)}`, { replace: true });
+    }
+  }, [navigate]);
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
