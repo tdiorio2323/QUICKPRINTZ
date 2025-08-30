@@ -43,7 +43,7 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
           title: "Welcome back!",
           description: "You have been signed in successfully.",
         });
-        navigate('/');
+        navigate('/portal');
         if (onLogin) onLogin('customer');
       } finally {
         setIsLoading(false);
@@ -129,4 +129,3 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
 };
 
 export default AuthPage;
-

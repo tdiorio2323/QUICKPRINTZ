@@ -18,6 +18,7 @@ import FAQ from "./pages/FAQ";
 import About from "./pages/About";
 import Compliance from "./pages/Compliance";
 import NotFound from "./pages/NotFound";
+import Portal from "./pages/Portal";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/design" element={<Design />} />
           <Route path="/configure" element={<MylarBagConfigurator />} />
+          <Route path="/portal" element={<Portal />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
