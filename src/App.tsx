@@ -20,6 +20,7 @@ import Compliance from "./pages/Compliance";
 import NotFound from "./pages/NotFound";
 import Portal from "./pages/Portal";
 import FolderPage from "./pages/Folder";
+import ClientsList, { ClientRedirect } from "./pages/Clients";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,8 @@ const App = () => (
           <Route path="/configure" element={<MylarBagConfigurator />} />
           <Route path="/portal" element={<Portal />} />
           <Route path="/portal/:folderId" element={<FolderPage />} />
+          <Route path="/portal/clients" element={<ClientsList />} />
+          <Route path="/portal/clients/:clientId" element={<ClientRedirect />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

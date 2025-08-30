@@ -3,7 +3,11 @@ import { useNavigate, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowLeft, File as FileIcon, Image as ImageIcon, FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
+import { MoreVertical, ArrowLeft, File as FileIcon, Image as ImageIcon, FileText } from "lucide-react";
 import { generateFiles, seedFolders } from "@/lib/portal";
 
 const iconForExt: Record<string, JSX.Element> = {
@@ -19,6 +23,7 @@ const FolderPage = () => {
   const { folderId = "" } = useParams();
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
+  const [previewId, setPreviewId] = useState<string | null>(null);
 
   const params = new URLSearchParams(window.location.search);
   const clientName = params.get("client") || "Client Portal";
@@ -31,6 +36,17 @@ const FolderPage = () => {
     if (!q) return files;
     return files.filter(f => `${f.name}.${f.ext}`.toLowerCase().includes(q));
   }, [files, query]);
+
+  const selected = previewId ? files.find(f => f.id === previewId) : null;
+
+  const handleDownload = (file: { name: string; ext: string }) => {
+    const a = document.createElement('a');
+    a.href = '/placeholder.svg';
+    a.download = `${file.name}.${file.ext}`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  };
 
   if (!folder) {
     return (
@@ -58,11 +74,22 @@ const FolderPage = () => {
           </button>
         </div>
 
-        <header className="mb-8">
+        <header className="mb-6 space-y-2">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href={backTo}>Portal</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{folder.title}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
           <h1 className="text-2xl md:text-3xl font-display font-bold premium-gradient-text">
-            {clientName} / {folder.title}
+            {clientName}
           </h1>
-          <p className="text-muted-foreground mt-1">{filtered.length} items</p>
+          <p className="text-muted-foreground">{filtered.length} items</p>
         </header>
 
         <div className="relative mb-10 max-w-xl">
@@ -74,9 +101,9 @@ const FolderPage = () => {
           />
         </div>
 
-        <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+        <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4">
           {filtered.map((file) => (
-            <Card key={file.id} className="aspect-square glass-morphism border-primary/20 shadow-elegant hover-lift cursor-pointer overflow-hidden">
+            <Card key={file.id} className="relative aspect-square glass-morphism border-primary/20 shadow-elegant hover-lift overflow-hidden">
               <CardContent className="w-full h-full p-4 flex flex-col items-center justify-center text-center">
                 <div className="mb-2">
                   {iconForExt[file.ext] ?? <FileIcon className="w-10 h-10 text-primary" />}
@@ -84,13 +111,37 @@ const FolderPage = () => {
                 <p className="text-sm font-medium line-clamp-2">{file.name}</p>
                 <span className="text-xs text-muted-foreground mt-1">.{file.ext}</span>
               </CardContent>
+              <div className="absolute top-2 right-2">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="icon" className="h-8 w-8 bg-black/20 hover:bg-black/30 text-white border border-white/20 backdrop-blur-sm">
+                      <MoreVertical className="h-4 w-4" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end">
+                    <DropdownMenuItem onClick={() => setPreviewId(file.id)}>Open</DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => handleDownload(file)}>Download</DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
             </Card>
           ))}
         </section>
+
+        <Dialog open={!!previewId} onOpenChange={(o) => !o && setPreviewId(null)}>
+          <DialogContent className="max-w-2xl">
+            <DialogHeader>
+              <DialogTitle>{selected ? `${selected.name}.${selected.ext}` : 'Preview'}</DialogTitle>
+            </DialogHeader>
+            <div className="min-h-[300px] flex items-center justify-center">
+              {/* Placeholder preview */}
+              <img src="/placeholder.svg" alt="Preview" className="w-64 h-64 opacity-80" />
+            </div>
+          </DialogContent>
+        </Dialog>
       </main>
     </div>
   );
 };
 
 export default FolderPage;
-

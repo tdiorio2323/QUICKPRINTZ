@@ -2,8 +2,7 @@ import React, { useState } from "react";
 
 // Import all 60 images from public folder
 const designImages = [
-    ...Array(40).fill(0).map((_, i) => `/60 designs for Reel/layer_${String(i + 1).padStart(3, '0')}_Layer ${i + ((i % 2) === 0 ? 0 : 1)}.jpg`),
-    // Add the rest of the images manually if needed
+    // Add correct premade design image paths here, e.g. '/premade-designs/design1.png'
 ];
 
 const PremadeDesignSlideshow = ({ onSelect }: { onSelect?: (img: string) => void }) => {

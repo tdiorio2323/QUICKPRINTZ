@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Palette } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import bagIcon from "@/assets/bag-icon.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +12,9 @@ const Navigation = () => {
     { name: "Gallery", href: "/gallery" },
     { name: "About", href: "/about" },
     { name: "FAQ", href: "/faq" },
-    { name: "Contact", href: "/contact" }
+    { name: "Contact", href: "/contact" },
+    { name: "Get Quote", href: "/quote" },
+    { name: "BUY BAGS", href: "/configure" }
   ];
 
   return (
@@ -36,27 +37,13 @@ const Navigation = () => {
                 key={item.name}
                 to={item.href}
                 className={`text-sm font-medium font-body transition-all duration-300 hover:scale-105 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full ${location.pathname === item.href
-                    ? "text-primary after:w-full"
-                    : "text-white hover:text-primary"
+                  ? "text-primary after:w-full"
+                  : "text-white hover:text-primary"
                   }`}
               >
                 {item.name}
               </Link>
             ))}
-          </div>
-
-          {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Button variant="ghost" size="lg" className="font-body hover-lift" asChild>
-              <Link to="/quote">
-                Get Quote
-              </Link>
-            </Button>
-            <Button variant="premium" size="lg" className="font-body shadow-premium" asChild>
-              <Link to="/configure">
-                BUY BAGS
-              </Link>
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -79,26 +66,14 @@ const Navigation = () => {
                   key={item.name}
                   to={item.href}
                   className={`block text-base font-medium font-body transition-all duration-300 hover:translate-x-2 ${location.pathname === item.href
-                      ? "text-primary"
-                      : "text-white hover:text-primary"
+                    ? "text-primary"
+                    : "text-white hover:text-primary"
                     }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="flex flex-col gap-3 pt-6 border-t border-primary/20">
-                <Button variant="ghost" size="lg" className="w-full font-body" asChild>
-                  <Link to="/quote">
-                    Get Quote
-                  </Link>
-                </Button>
-                <Button variant="premium" size="lg" className="w-full font-body shadow-premium" asChild>
-                  <Link to="/configure">
-                    BUY BAGS
-                  </Link>
-                </Button>
-              </div>
             </div>
           </div>
         )}
