@@ -25,6 +25,7 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
   };
   const clientName = clientParam || hostClientMap[host] || "Quick Printz";
   const isBagman = clientName.toLowerCase() === "bagman";
+  const bagmanLogoSrc = (import.meta as any).env?.VITE_BAGMAN_LOGO_URL || "/bagman-logo.png";
 
   const handleKeypadPress = (digit: string) => {
     if (password.length < 3) {
@@ -78,7 +79,13 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
       <Card className="w-full max-w-md bg-black/10 backdrop-blur-sm border-white/10 shadow-2xl relative z-10">
         <CardHeader className="text-center space-y-6">
           <div className="flex items-center justify-center">
-            {clientName === 'Quick Printz' ? (
+            {isBagman ? (
+              <img
+                src={bagmanLogoSrc}
+                alt="Bagman Logo"
+                className="h-40 w-auto"
+              />
+            ) : clientName === 'Quick Printz' ? (
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F8d5a64d26c0a4781a3269eef89d71661%2F2d3923d943614b4894f096117815d2be?format=webp&width=800"
                 alt="Quick Printz Logo"

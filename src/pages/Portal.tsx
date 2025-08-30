@@ -22,6 +22,8 @@ const Portal = () => {
     };
     return hostMap[host] || "Client Portal";
   }, []);
+  const isBagman = clientName.toLowerCase() === 'bagman';
+  const bagmanLogoSrc = (import.meta as any).env?.VITE_BAGMAN_LOGO_URL || "/bagman-logo.png";
 
   const folders = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -34,11 +36,17 @@ const Portal = () => {
       <Navigation />
 
       <main className="max-w-7xl mx-auto px-8 pt-40 pb-24">
-        <header className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-display font-bold premium-gradient-text">
-            {clientName}
-          </h1>
-          <p className="text-muted-foreground mt-1">Secure project files and folders</p>
+        <header className="mb-8 text-center md:text-left">
+          <div className="flex items-center justify-center md:justify-start mb-3">
+            {isBagman ? (
+              <img src={bagmanLogoSrc} alt="Bagman Logo" className="h-16 w-auto" />
+            ) : (
+              <h1 className="text-3xl md:text-4xl font-display font-bold premium-gradient-text">
+                {clientName}
+              </h1>
+            )}
+          </div>
+          <p className="text-muted-foreground">Secure project files and folders</p>
         </header>
 
         <div className="relative mb-10 max-w-xl">
