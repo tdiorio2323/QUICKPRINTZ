@@ -19,7 +19,7 @@ const Index = () => {
     };
     const client = hostMap[host];
     if (client) {
-      navigate(`/portal?client=${encodeURIComponent(client)}`, { replace: true });
+      navigate(`/auth?client=${encodeURIComponent(client)}`, { replace: true });
     }
   }, [navigate]);
   const organizationSchema = {
