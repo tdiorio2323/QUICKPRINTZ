@@ -271,7 +271,7 @@
     -webkit-text-fill-color: transparent;
   }
 
-  /* Custom floating animation for background patterns */
+  /* Scroll-responsive background animations */
   @keyframes float {
     0%, 100% { 
       transform: translateY(0px) rotate(0deg);
@@ -281,5 +281,40 @@
       transform: translateY(-10px) rotate(1deg);
       background-size: 55px 55px;
     }
+  }
+
+  @keyframes meshGradient {
+    0%, 100% {
+      background: radial-gradient(circle at 0% 50%, hsl(var(--primary) / 0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 100% 50%, hsl(var(--accent) / 0.1) 0%, transparent 50%);
+    }
+    25% {
+      background: radial-gradient(circle at 100% 0%, hsl(var(--primary) / 0.12) 0%, transparent 50%),
+                  radial-gradient(circle at 0% 100%, hsl(var(--accent) / 0.08) 0%, transparent 50%);
+    }
+    50% {
+      background: radial-gradient(circle at 100% 100%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 0% 0%, hsl(var(--accent) / 0.12) 0%, transparent 50%);
+    }
+    75% {
+      background: radial-gradient(circle at 0% 100%, hsl(var(--primary) / 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 100% 0%, hsl(var(--accent) / 0.15) 0%, transparent 50%);
+    }
+  }
+
+  .scroll-bg {
+    animation: meshGradient 30s ease-in-out infinite;
+  }
+
+  .floating-element {
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .scroll-pattern {
+    animation: float 25s ease-in-out infinite reverse;
+  }
+
+  .mesh-gradient {
+    animation: meshGradient 20s ease-in-out infinite;
   }
 }

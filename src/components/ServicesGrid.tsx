@@ -32,15 +32,6 @@ const services = [{
 }];
 const ServicesGrid = () => {
   return <section className="relative px-8 py-24">
-      {/* Black Brick Wall Background */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.pexels.com/photos/2273486/pexels-photo-2273486.jpeg"
-          alt="Black Brick Wall"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50"></div>
-      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
