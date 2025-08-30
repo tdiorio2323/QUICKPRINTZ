@@ -9,6 +9,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
 import { MoreVertical, ArrowLeft, File as FileIcon, Image as ImageIcon, FileText } from "lucide-react";
 import { generateFiles, seedFolders } from "@/lib/portal";
+import { getBagmanFiles } from "@/lib/bagman";
 
 const iconForExt: Record<string, JSX.Element> = {
   png: <ImageIcon className="w-10 h-10 text-primary" />,
@@ -26,10 +27,23 @@ const FolderPage = () => {
   const [previewId, setPreviewId] = useState<string | null>(null);
 
   const params = new URLSearchParams(window.location.search);
-  const clientName = params.get("client") || "Client Portal";
+  const host = typeof window !== 'undefined' ? window.location.hostname : "";
+  const hostMap: Record<string, string> = {
+    "bagman.tdstudioshq.com": "Bagman",
+    "tdstudioshq.com": "TD Studios",
+    "www.tdstudioshq.com": "TD Studios",
+  };
+  const clientName = params.get("client") || hostMap[host] || "Client Portal";
+  const isBagman = clientName.toLowerCase() === 'bagman';
 
   const folder = seedFolders.find(f => f.id === folderId);
-  const files = useMemo(() => generateFiles(folderId, 30), [folderId]);
+  const files = useMemo(() => {
+    if (isBagman && folderId === 'website-files') {
+      // Map Bagman file URLs into FileItem shape
+      return getBagmanFiles().map(f => ({ id: f.id, name: f.name, ext: f.ext }));
+    }
+    return generateFiles(folderId, 30);
+  }, [folderId, isBagman]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -101,7 +115,7 @@ const FolderPage = () => {
           />
         </div>
 
-        <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+            <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4">
           {filtered.map((file) => (
             <Card key={file.id} className="relative aspect-square glass-morphism border-primary/20 shadow-elegant hover-lift overflow-hidden">
               <CardContent className="w-full h-full p-4 flex flex-col items-center justify-center text-center">
@@ -134,7 +148,7 @@ const FolderPage = () => {
               <DialogTitle>{selected ? `${selected.name}.${selected.ext}` : 'Preview'}</DialogTitle>
             </DialogHeader>
             <div className="min-h-[300px] flex items-center justify-center">
-              {/* Placeholder preview */}
+              {/* Placeholder preview; real assets open in new tab or can be enhanced later */}
               <img src="/placeholder.svg" alt="Preview" className="w-64 h-64 opacity-80" />
             </div>
           </DialogContent>

@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Folder, Search } from "lucide-react";
 import { seedFolders } from "@/lib/portal";
+import { getBagmanFiles } from "@/lib/bagman";
 
 const Portal = () => {
   const [query, setQuery] = useState("");
@@ -27,9 +28,16 @@ const Portal = () => {
 
   const folders = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return seedFolders;
-    return seedFolders.filter(f => f.title.toLowerCase().includes(q));
-  }, [query]);
+    let base = seedFolders;
+    if (isBagman) {
+      const bagFiles = getBagmanFiles();
+      // Prepend Bagman 'WEBSITE FILES' folder if any files exist
+      const special = [{ id: 'website-files', title: 'WEBSITE FILES', count: bagFiles.length }];
+      base = [...special, ...seedFolders];
+    }
+    if (!q) return base;
+    return base.filter(f => f.title.toLowerCase().includes(q));
+  }, [query, isBagman]);
 
   return (
     <div className="min-h-screen bg-background">
