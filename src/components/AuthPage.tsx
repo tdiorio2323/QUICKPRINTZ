@@ -14,6 +14,18 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
+  // Simple client detection via query param or hostname
+  const params = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : "");
+  const clientParam = params.get("client");
+  const host = typeof window !== 'undefined' ? window.location.hostname : "";
+  const hostClientMap: Record<string, string> = {
+    "bagman.tdstudioshq.com": "Bagman",
+    "tdstudioshq.com": "TD Studios",
+    "www.tdstudioshq.com": "TD Studios",
+  };
+  const clientName = clientParam || hostClientMap[host] || "Quick Printz";
+  const isBagman = clientName.toLowerCase() === "bagman";
+
   const handleKeypadPress = (digit: string) => {
     if (password.length < 3) {
       setPassword(prev => prev + digit);
@@ -66,11 +78,17 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
       <Card className="w-full max-w-md bg-black/10 backdrop-blur-sm border-white/10 shadow-2xl relative z-10">
         <CardHeader className="text-center space-y-6">
           <div className="flex items-center justify-center">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F8d5a64d26c0a4781a3269eef89d71661%2F2d3923d943614b4894f096117815d2be?format=webp&width=800"
-              alt="Quick Printz Logo"
-              className="h-64 w-auto"
-            />
+            {clientName === 'Quick Printz' ? (
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8d5a64d26c0a4781a3269eef89d71661%2F2d3923d943614b4894f096117815d2be?format=webp&width=800"
+                alt="Quick Printz Logo"
+                className="h-64 w-auto"
+              />
+            ) : (
+              <h2 className="text-4xl md:text-5xl font-display font-bold premium-gradient-text">
+                {clientName}
+              </h2>
+            )}
           </div>
           <p className="text-muted-foreground text-lg">Welcome back</p>
         </CardHeader>
@@ -111,7 +129,10 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full text-black bg-yellow-500/80 hover:bg-yellow-500/90 backdrop-blur-sm border border-yellow-300/40 shadow-glow"
+              className={isBagman
+                ? "w-full text-black bg-emerald-500/80 hover:bg-emerald-500/90 backdrop-blur-sm border border-emerald-300/40 shadow-glow"
+                : "w-full text-black bg-yellow-500/80 hover:bg-yellow-500/90 backdrop-blur-sm border border-yellow-300/40 shadow-glow"
+              }
             >
               {isLoading ? "Loading..." : "Sign In"}
             </Button>

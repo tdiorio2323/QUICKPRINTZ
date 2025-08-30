@@ -17,6 +17,8 @@ const Portal = () => {
     const host = typeof window !== 'undefined' ? window.location.hostname : "";
     const hostMap: Record<string, string> = {
       "bagman.tdstudioshq.com": "Bagman",
+      "tdstudioshq.com": "TD Studios",
+      "www.tdstudioshq.com": "TD Studios",
     };
     return hostMap[host] || "Client Portal";
   }, []);

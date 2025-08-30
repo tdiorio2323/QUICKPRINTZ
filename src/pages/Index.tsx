@@ -15,6 +15,8 @@ const Index = () => {
     const host = typeof window !== 'undefined' ? window.location.hostname : "";
     const hostMap: Record<string, string> = {
       "bagman.tdstudioshq.com": "Bagman",
+      "tdstudioshq.com": "TD Studios",
+      "www.tdstudioshq.com": "TD Studios",
       // Add more subdomain -> client name mappings here as needed
     };
     const client = hostMap[host];

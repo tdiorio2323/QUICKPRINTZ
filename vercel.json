@@ -20,6 +20,20 @@
       ],
       "destination": "/auth?client=Bagman"
     },
+    {
+      "source": "/",
+      "has": [
+        { "type": "host", "value": "tdstudioshq.com" }
+      ],
+      "destination": "/auth?client=TD%20Studios"
+    },
+    {
+      "source": "/",
+      "has": [
+        { "type": "host", "value": "www.tdstudioshq.com" }
+      ],
+      "destination": "/auth?client=TD%20Studios"
+    },
     { "source": "/(.*)", "destination": "/" }
   ]
 }
