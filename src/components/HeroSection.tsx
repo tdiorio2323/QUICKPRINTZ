@@ -5,14 +5,30 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-40">
-      {/* Hero Background Image */}
+      {/* Animated Premium Background */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets%2Fed5382895c1f4487a68dd55afef3b83c%2F3306cf242e664d5983b4f132a942f5aa?format=webp&width=800"
-          alt="Hero Background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/30"></div>
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-accent/10"></div>
+        
+        {/* Animated geometric patterns */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/3 right-0 w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        </div>
+        
+        {/* Scroll-responsive overlay pattern */}
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: `radial-gradient(circle at 50% 50%, hsl(var(--primary) / 0.1) 1px, transparent 1px)`,
+            backgroundSize: '50px 50px',
+            animation: 'float 20s ease-in-out infinite'
+          }}
+        ></div>
+        
+        {/* Premium overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-background/20"></div>
       </div>
 
       {/* Hero Content */}

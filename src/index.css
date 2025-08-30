@@ -270,4 +270,16 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  /* Custom floating animation for background patterns */
+  @keyframes float {
+    0%, 100% { 
+      transform: translateY(0px) rotate(0deg);
+      background-size: 50px 50px;
+    }
+    50% { 
+      transform: translateY(-10px) rotate(1deg);
+      background-size: 55px 55px;
+    }
+  }
 }
