@@ -49,11 +49,11 @@ const ServicesGrid = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {services.map((service, index) => {
-          return <Card key={index} className="group glass-morphism hover:border-primary/40 transition-all duration-700 hover-lift shadow-elegant hover:shadow-premium h-full flex flex-col min-h-[28rem] md:min-h-[30rem]">
+          return <Card key={index} className="group glass-morphism hover:border-primary/40 transition-all duration-700 hover-lift shadow-elegant hover:shadow-premium h-full flex flex-col min-h-[32rem] md:min-h-[34rem]">
                 <CardContent className="p-10 flex flex-col h-full">
                   {/* Service Image - First element */}
                   <div className="mb-8">
-                    <img src={service.image} alt={service.title} className="w-full h-56 md:h-64 object-cover rounded-2xl shadow-elegant group-hover:shadow-premium transition-all duration-500" />
+                    <img src={service.image} alt={service.title} className="w-full h-64 md:h-72 object-cover rounded-2xl shadow-elegant group-hover:shadow-premium transition-all duration-500" />
                   </div>
 
                   {/* Content aligned with bullets */}
