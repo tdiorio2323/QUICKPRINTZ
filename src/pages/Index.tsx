@@ -4,6 +4,7 @@ import ServicesGrid from "@/components/ServicesGrid";
 import PortfolioSlideshow from "@/components/PortfolioSlideshow";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import QuickContactForm from "@/components/QuickContactForm";
 
 const Index = () => {
   const organizationSchema = {
@@ -70,6 +71,7 @@ const Index = () => {
         </div>
 
         <Footer />
+        <QuickContactForm />
       </div>
     </div>
   );

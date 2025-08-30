@@ -52,8 +52,8 @@ const ServicesGrid = () => {
           return <Card key={index} className="group glass-morphism hover:border-primary/40 transition-all duration-700 hover-lift shadow-elegant hover:shadow-premium h-full flex flex-col">
                 <CardContent className="p-10 flex flex-col h-full">
                   {/* Service Image - First element */}
-                  <div className="flex justify-center mb-8">
-                    <img src={service.image} alt={service.title} className="w-56 h-40 object-cover rounded-2xl shadow-elegant group-hover:shadow-premium transition-all duration-500" />
+                  <div className="mb-8">
+                    <img src={service.image} alt={service.title} className="w-full h-48 object-cover rounded-2xl shadow-elegant group-hover:shadow-premium transition-all duration-500" />
                   </div>
 
                   {/* Content aligned with bullets */}
