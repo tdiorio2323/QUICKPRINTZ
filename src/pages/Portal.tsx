@@ -1,37 +1,10 @@
 import { useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Folder, Search } from "lucide-react";
-
-type FolderItem = {
-  id: string;
-  title: string;
-  count?: number; // optional file count badge
-}
-
-const seedFolders: FolderItem[] = [
-  { id: "brand-assets", title: "Brand Assets", count: 42 },
-  { id: "design-files", title: "Design Files", count: 18 },
-  { id: "invoices", title: "Invoices", count: 12 },
-  { id: "contracts", title: "Contracts", count: 7 },
-  { id: "proofs", title: "Proofs", count: 25 },
-  { id: "dielines", title: "Packaging Dielines", count: 9 },
-  { id: "photography", title: "Photography", count: 63 },
-  { id: "videos", title: "Videos", count: 14 },
-  { id: "social", title: "Social Content", count: 36 },
-  { id: "campaigns", title: "Campaigns", count: 8 },
-  { id: "orders", title: "Orders", count: 21 },
-  { id: "shipments", title: "Shipments", count: 10 },
-  { id: "quotes", title: "Quotes", count: 6 },
-  { id: "approvals", title: "Approvals", count: 5 },
-  { id: "mockups", title: "Mockups", count: 28 },
-  { id: "source", title: "Source Files", count: 31 },
-  { id: "press", title: "Press Ready", count: 12 },
-  { id: "marketing", title: "Marketing", count: 19 },
-  { id: "archive-2023", title: "Archive 2023", count: 44 },
-  { id: "archive-2024", title: "Archive 2024", count: 17 },
-];
+import { seedFolders } from "@/lib/portal";
 
 const Portal = () => {
   const [query, setQuery] = useState("");
@@ -71,25 +44,33 @@ const Portal = () => {
         </div>
 
         <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          {folders.map((f) => (
-            <Card
-              key={f.id}
-              className="aspect-square glass-morphism border-primary/20 shadow-elegant hover-lift cursor-pointer overflow-hidden"
-              role="button"
-              aria-label={`${f.title} folder`}
-              tabIndex={0}
-            >
-              <CardContent className="w-full h-full p-6 flex flex-col items-center justify-center text-center">
-                <Folder className="w-12 h-12 text-primary mb-3" />
-                <div className="space-y-1">
-                  <p className="font-medium line-clamp-2">{f.title}</p>
-                  {typeof f.count === "number" && (
-                    <span className="text-xs text-muted-foreground">{f.count} items</span>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+          {folders.map((f) => {
+            const navigate = useNavigate();
+            const params = new URLSearchParams(window.location.search);
+            const qs = params.toString();
+            const to = `/portal/${encodeURIComponent(f.id)}${qs ? `?${qs}` : ""}`;
+            return (
+              <Card
+                key={f.id}
+                className="aspect-square glass-morphism border-primary/20 shadow-elegant hover-lift cursor-pointer overflow-hidden"
+                role="button"
+                aria-label={`${f.title} folder`}
+                tabIndex={0}
+                onClick={() => navigate(to)}
+                onKeyDown={(e) => { if (e.key === 'Enter') navigate(to) }}
+              >
+                <CardContent className="w-full h-full p-6 flex flex-col items-center justify-center text-center">
+                  <Folder className="w-12 h-12 text-primary mb-3" />
+                  <div className="space-y-1">
+                    <p className="font-medium line-clamp-2">{f.title}</p>
+                    {typeof f.count === "number" && (
+                      <span className="text-xs text-muted-foreground">{f.count} items</span>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </section>
       </main>
     </div>
@@ -97,4 +78,3 @@ const Portal = () => {
 };
 
 export default Portal;
-
