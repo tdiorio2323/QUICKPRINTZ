@@ -21,6 +21,7 @@ import NotFound from "./pages/NotFound";
 import Portal from "./pages/Portal";
 import FolderPage from "./pages/Folder";
 import ClientsList, { ClientRedirect } from "./pages/Clients";
+import RequireAuth from "@/components/RequireAuth";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/td" element={<Auth />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/bagman" element={<Auth />} />
+          <Route path="/login" element={<Auth />} />
           <Route path="/products" element={<Products />} />
           <Route path="/mylar-bags" element={<MylarBags />} />
           <Route path="/boxes" element={<Boxes />} />
@@ -46,9 +49,9 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/design" element={<Design />} />
           <Route path="/configure" element={<MylarBagConfigurator />} />
-          <Route path="/portal" element={<Portal />} />
-          <Route path="/portal/:folderId" element={<FolderPage />} />
-          <Route path="/portal/clients" element={<ClientsList />} />
+          <Route path="/portal" element={<RequireAuth><Portal /></RequireAuth>} />
+          <Route path="/portal/:folderId" element={<RequireAuth><FolderPage /></RequireAuth>} />
+          <Route path="/portal/clients" element={<RequireAuth><ClientsList /></RequireAuth>} />
           <Route path="/portal/clients/:clientId" element={<ClientRedirect />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

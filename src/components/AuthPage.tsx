@@ -20,15 +20,19 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
   const host = typeof window !== 'undefined' ? window.location.hostname : "";
   const hostClientMap: Record<string, string> = {
     "bagman.tdstudioshq.com": "Bagman",
+    "portal.bagmanpack.com": "Bagman",
     "tdstudioshq.com": "TD Studios",
     "www.tdstudioshq.com": "TD Studios",
   };
-  const clientName = clientParam || hostClientMap[host] || "Quick Printz";
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : "";
+  const clientName = (pathname.startsWith('/bagman') && 'Bagman') || clientParam || hostClientMap[host] || "Quick Printz";
   const isBagman = clientName.toLowerCase() === "bagman";
-  const bagmanLogoSrc = (import.meta as any).env?.VITE_BAGMAN_LOGO_URL || "/bagman-logo.png";
+  const isTD = clientName === 'TD Studios';
+  const bagmanLogoSrc = (import.meta as any).env?.VITE_BAGMAN_LOGO_URL || "/bagman-logo.svg";
+  const tdLogoSrc = (import.meta as any).env?.VITE_TDSTUDIOS_LOGO_URL || "/tdstudios-logo.svg";
 
   const handleKeypadPress = (digit: string) => {
-    if (password.length < 3) {
+    if (password.length < 6) {
       setPassword(prev => prev + digit);
     }
   };
@@ -39,7 +43,8 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password !== "420") {
+    const configured = (import.meta as any).env?.VITE_PORTAL_PASSCODE || "420";
+    if (password !== configured) {
       toast({
         title: "Error",
         description: "Invalid password",
@@ -52,6 +57,12 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
 
     setTimeout(() => {
       try {
+        try {
+          // Mark simple client-side auth. This is NOT a secure gate, but
+          // satisfies a quick path-based portal requirement.
+          localStorage.setItem('portal_auth', 'true');
+        } catch (_) {}
+
         toast({
           title: "Welcome back!",
           description: "You have been signed in successfully.",
@@ -84,6 +95,12 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
                 src={bagmanLogoSrc}
                 alt="Bagman Logo"
                 className="h-40 w-auto"
+              />
+            ) : isTD ? (
+              <img
+                src={tdLogoSrc}
+                alt="TD Studios Logo"
+                className="h-16 w-auto"
               />
             ) : clientName === 'Quick Printz' ? (
               <img
