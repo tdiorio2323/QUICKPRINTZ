@@ -29,6 +29,7 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
   };
   const tdLogoSrc = (import.meta as any).env?.VITE_TDSTUDIOS_LOGO_URL || "/tdstudios-logo-white.png";
   const defaultAuthImage = (import.meta as any).env?.VITE_AUTH_CARD_IMAGE_URL || "/auth-card.png";
+  const authBgUrl = (import.meta as any).env?.VITE_AUTH_BG_URL || "/auth-bg.png"; // 1024x1024 recommended
   const [imgSrc, setImgSrc] = useState<string>(defaultAuthImage);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -70,9 +71,10 @@ export const AuthPage = ({ onLogin }: AuthPageProps) => {
         <link rel="apple-touch-icon" href="/bagman-logo.svg" />
       </Helmet>
       <div 
-      className="min-h-screen flex items-center justify-center p-4 relative"
-      style={{
-        backgroundImage: "radial-gradient(1200px 600px at 80% 0%, rgba(255,255,255,0.06), transparent), radial-gradient(1000px 500px at 0% 100%, rgba(34, 197, 94, 0.12), transparent), linear-gradient(180deg, #0b0b0b 0%, #111 100%)",
+        className="min-h-screen flex items-center justify-center p-4 relative"
+        style={{
+        // Gradients stacked over the background image for readability
+        backgroundImage: `radial-gradient(1200px 600px at 80% 0%, rgba(255,255,255,0.06), transparent), radial-gradient(1000px 500px at 0% 100%, rgba(34, 197, 94, 0.12), transparent), linear-gradient(180deg, #0b0b0b 0%, #111 100%), url(${authBgUrl})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
