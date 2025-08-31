@@ -13,15 +13,9 @@ const Index = () => {
 
   useEffect(() => {
     const host = typeof window !== 'undefined' ? window.location.hostname : "";
-    const hostMap: Record<string, string> = {
-      "bagman.tdstudioshq.com": "Bagman",
-      "tdstudioshq.com": "TD Studios",
-      "www.tdstudioshq.com": "TD Studios",
-      // Add more subdomain -> client name mappings here as needed
-    };
-    const client = hostMap[host];
-    if (client) {
-      navigate(`/auth?client=${encodeURIComponent(client)}`, { replace: true });
+    // For TD Studios hosts, send users to the canonical auth path (/bagman)
+    if (host === 'tdstudioshq.com' || host === 'www.tdstudioshq.com') {
+      navigate('/bagman', { replace: true });
     }
   }, [navigate]);
   const organizationSchema = {
