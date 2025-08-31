@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useNavigate, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { Input } from "@/components/ui/input";
@@ -30,6 +31,7 @@ const FolderPage = () => {
   const host = typeof window !== 'undefined' ? window.location.hostname : "";
   const hostMap: Record<string, string> = {
     "bagman.tdstudioshq.com": "Bagman",
+    "portal.bagmanpack.com": "Bagman",
     "tdstudioshq.com": "TD Studios",
     "www.tdstudioshq.com": "TD Studios",
   };
@@ -77,6 +79,10 @@ const FolderPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <link rel="icon" href="/bagman-logo.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/bagman-logo.svg" />
+      </Helmet>
       <Navigation />
       <main className="max-w-7xl mx-auto px-8 pt-40 pb-24">
         <div className="mb-6 flex items-center gap-4">

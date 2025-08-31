@@ -8,9 +8,11 @@ const FILE_GLOB = import.meta.glob(
     '@/assets/bagman/website-files/**/*.{png,jpg,jpeg,webp,svg,gif}',
     '@/assets/bagman/website-files/**/*.{pdf,ai,psd}',
     '@/assets/bagman/website-files/**/*.{txt,md,json}',
+    // Catch-all for any other deliverables placed here
     '@/assets/bagman/website-files/**/*.*',
   ],
-  { eager: true, import: 'default' }
+  // Return file URLs for all matches (works for unknown extensions like .md)
+  { eager: true, import: 'default', query: '?url' }
 ) as Record<string, string>;
 
 export function getBagmanFiles(): BagmanFile[] {
@@ -26,4 +28,3 @@ export function getBagmanFiles(): BagmanFile[] {
   }
   return out;
 }
-

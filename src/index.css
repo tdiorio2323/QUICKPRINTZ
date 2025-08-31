@@ -317,4 +317,27 @@
   .mesh-gradient {
     animation: meshGradient 20s ease-in-out infinite;
   }
+
+  /* Crystal shimmer overlay for logos */
+  .crystal-shimmer {
+    position: relative;
+    display: inline-block;
+  }
+  .crystal-shimmer img {
+    display: block;
+    filter: drop-shadow(0 2px 24px hsl(0 0% 100% / 0.25));
+  }
+  .crystal-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, hsl(0 0% 100% / 0.35) 50%, transparent 70%);
+    transform: translateX(-100%);
+    animation: crystal-sweep 3.5s ease-in-out infinite;
+    mix-blend-mode: screen;
+    pointer-events: none;
+  }
+  @keyframes crystal-sweep {
+    to { transform: translateX(100%); }
+  }
 }
