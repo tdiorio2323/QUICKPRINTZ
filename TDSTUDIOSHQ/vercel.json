@@ -13,28 +13,6 @@
     }
   ],
   "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        { "type": "host", "value": "portal.bagmanpack.com" }
-      ],
-      "destination": "/login?client=Bagman"
-    },
-    {
-      "source": "/",
-      "has": [
-        { "type": "host", "value": "bagman.tdstudioshq.com" }
-      ],
-      "destination": "/auth?client=Bagman"
-    },
-    {
-      "source": "/",
-      "has": [
-        { "type": "host", "value": "portal.tdstudioshq.com" }
-      ],
-      "destination": "/portal"
-    },
-    
     { "source": "/(.*)", "destination": "/" }
   ]
 }
