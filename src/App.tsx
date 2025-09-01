@@ -21,6 +21,7 @@ import NotFound from "./pages/NotFound";
 import Portal from "./pages/Portal";
 import FolderPage from "./pages/Folder";
 import ClientsList, { ClientRedirect } from "./pages/Clients";
+import TDGate from "./pages/TDGate";
 import RequireAuth from "@/components/RequireAuth";
 
 const queryClient = new QueryClient();
@@ -53,6 +54,10 @@ const App = () => (
           <Route path="/portal/:folderId" element={<RequireAuth><FolderPage /></RequireAuth>} />
           <Route path="/portal/clients" element={<RequireAuth><ClientsList /></RequireAuth>} />
           <Route path="/portal/clients/:clientId" element={<ClientRedirect />} />
+          <Route path="/tyler" element={<Auth />} />
+          <Route path="/bagman" element={<Navigate to="/tyler" />} />
+          <Route path="/td-gate" element={<TDGate />} />
+          <Route path="/tdportal" element={<Navigate to="/portal" />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

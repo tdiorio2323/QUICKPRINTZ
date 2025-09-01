@@ -1,8 +1,14 @@
-import { AuthPage } from "@/components/AuthPage";
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Auth = () => {
-  return <AuthPage />;
-}
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/portal');
+  }, [navigate]);
+
+  return null;
+};
 
 export default Auth;
-
